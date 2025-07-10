@@ -1,0 +1,176 @@
+body {
+    background: #f8fafc;
+    margin: 0;
+    padding: 0;
+}
+.navbar {
+    width: 100%;
+    background: #ffffff;
+    color: #fefefe;
+    font-family: 'Titillium Web', Verdana, Helvetica, sans-serif;
+    font-size: 16px;
+    letter-spacing: 1px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+.navbar-container {
+    max-width: 900px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 24px;
+    height: 56px;
+}
+.navbar-logo {
+    font-weight: 700;
+    font-size: 20px;
+    letter-spacing: 2px;
+    color: #000000;
+    text-decoration: none;
+}
+.navbar-links {
+    display: flex;
+    gap: 28px;
+}
+.navbar-links a {
+    color: #000000;
+    text-decoration: none;
+    transition: color 0.2s;
+    font-weight: 500;
+    padding: 4px 0;
+    border-bottom: 2px solid transparent;
+}
+.navbar-links a:hover, .navbar-links a:focus {
+    color: #f09228;
+    border-bottom: 2px solid #f09228;
+}
+.circular_img {
+    margin-top: 60px;
+    border-radius: 100%;
+    width: 250px;
+    height: 250px;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.08);
+}
+.section-card-header{
+    padding-right: 0px;
+    padding-top: 0px;
+    padding-bottom: 0px;
+}
+a {
+    color: #1772d0;
+    text-decoration:none;
+}
+a:focus, a:hover {
+    color: #f09228;
+    text-decoration:none;
+}
+body,td,th,tr,p,a {
+    font-family: 'Titillium Web', Verdana, Helvetica, sans-serif;
+    font-size: 15px;
+    font-weight: 400;
+}
+strong {
+    font-family: 'Titillium Web', Verdana, Helvetica, sans-serif;
+    font-size: 15px;
+    font-weight: 800;
+}
+heading {
+    font-family: 'Titillium Web', Verdana, Helvetica, sans-serif;
+    font-size: 22px;
+    font-weight: 1000;
+    color: #222c36;
+    letter-spacing: 1px;
+}
+papertitle {
+    font-family: 'Titillium Web', Verdana, Helvetica, sans-serif;
+    font-size: 15px;
+    font-weight: 700;
+}
+name {
+    font-family: 'Titillium Web', Verdana, Helvetica, sans-serif;
+    font-size: 32px;
+    font-weight: 800;
+    color: #222c36;
+}
+.one {
+    margin-top: 10px;
+    width: 120px;
+    height: 120px;
+    /* Center horizontally in td */
+    margin-left: auto;
+    margin-right: auto;
+        /* Center content horizontally and vertically */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.fade {
+    transition: opacity .2s ease-in-out;
+    -moz-transition: opacity .2s ease-in-out;
+    -webkit-transition: opacity .2s ease-in-out;
+}
+span.highlight {
+    background-color: #ffffd0;
+}
+/* Card style for sections */
+.section-card {
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+    margin: 10px;
+    padding: 24px 24px;
+}
+.project-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(380px, 1.5fr));
+  gap: 2rem;
+  padding: 10px;
+}
+.project-div {
+    margin-bottom: 10px;
+
+}
+.project-image {
+  width: 100%;
+  border-radius: 8px;
+  height: 180px;
+  object-fit: cover;
+}
+@media (max-width: 900px) {
+    .navbar-container, table[width="800"] {
+        max-width: 100vw !important;
+        width: 100vw !important;
+        padding: 0 8px;
+    }
+    .section-card {
+        padding: 16px 8px;
+    }
+}
+@media (max-width: 600px) {
+    .navbar-container {
+        flex-direction: column;
+        align-items: flex-start;
+        height: auto;
+        padding: 8px 4px;
+    }
+    .navbar-links {
+        gap: 16px;
+        margin-top: 8px;
+    }
+    .circular_img {
+        width: 120px;
+        height: 120px;
+    }
+    name {
+        font-size: 22px;
+    }
+    heading {
+        font-size: 18px;
+    }
+    .section-card {
+        padding: 10px 2px;
+    }
+}
