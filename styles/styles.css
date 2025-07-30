@@ -114,6 +114,10 @@ name {
 span.highlight {
     background-color: #ffffd0;
 }
+.highlight-blue {
+  color: #023b74;
+  font-weight: 600;
+}
 /* Card style for sections */
 .section-card {
     background: #fff;
@@ -172,4 +176,5 @@ span.highlight {
     .section-card {
         padding: 10px 2px;
     }
+    
 }
