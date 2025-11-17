@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Dropout Prediction - Kalyani Wasave</title>
+    <meta name="description" content="ML model predicting student dropout and academic success using 10 years of data.">
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700;800;900&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="styles_new.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="main-nav" id="mainNav">
+        <div class="nav-container">
+            <a href="index_new.html" class="nav-logo">← Back to Portfolio</a>
+            
+            <div class="nav-actions">
+                <a href="Projects/Student_Dropout_Prediction.pdf" target="_blank" class="btn-secondary-nav">View PDF</a>
+                <a href="https://github.com/kalyanivasave/Student-Prediction-Model" target="_blank" class="btn-primary-nav">View GitHub</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Project Hero Section -->
+    <section class="project-hero">
+        <div class="container">
+            <div class="project-hero-content centered">
+                <div class="project-category">EdTech • Machine Learning • Data Science</div>
+                <h1 class="project-hero-title">Student Dropout Prediction</h1>
+                <p class="project-hero-subtitle">ML model helping universities identify at-risk students early for timely intervention and improved retention strategies.</p>
+                
+                <div class="project-hero-buttons">
+                    <a href="https://github.com/kalyanivasave/Student-Prediction-Model" target="_blank" class="btn-primary">
+                        View Code
+                    </a>
+                    <a href="Projects/Student_Dropout_Prediction.pdf" target="_blank" class="btn-secondary">
+                        Case Study
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Quick Overview -->
+    <section class="project-section overview">
+        <div class="container">
+            <div class="overview-stats">
+                <div class="stat-item">
+                    <div class="stat-number">0.74</div>
+                    <div class="stat-label">F1 Score</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">10</div>
+                    <div class="stat-label">Years of Data</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">3</div>
+                    <div class="stat-label">Outcomes Predicted</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Problem & Solution -->
+    <section class="project-section problem-solution">
+        <div class="container">
+            <div class="two-column">
+                <div class="column">
+                    <h2>The Problem</h2>
+                    <p>Universities struggle to identify at-risk students early, leading to high dropout rates. Traditional approaches are reactive rather than predictive.</p>
+                    
+                    <div class="challenge-list">
+                        <div class="challenge">Late identification of struggling students</div>
+                        <div class="challenge">Limited predictive insights</div>
+                        <div class="challenge">Inefficient resource allocation</div>
+                    </div>
+                </div>
+                
+                <div class="column">
+                    <h2>The Solution</h2>
+                    <p>Machine learning model analyzing demographic, academic, and financial data to predict three outcomes: dropout, stay enrolled, or graduate.</p>
+                    
+                    <div class="feature-highlight">
+                        <h4>Key Features</h4>
+                        <ul>
+                            <li>Early risk identification</li>
+                            <li>Multi-class prediction</li>
+                            <li>Stable Random Forest model</li>
+                            <li>10-year historical analysis</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Data & Models -->
+    <section class="project-section tech-overview">
+        <div class="container">
+            <h2 class="section-title">Methodology & Results</h2>
+            
+            <div class="methodology-grid">
+                <div class="method-card">
+                    <div class="method-icon">[D]</div>
+                    <h3>Dataset</h3>
+                    <p><strong>SATDAP-supported data</strong><br>
+                    10 years (2008-2019)<br>
+                    Demographic, academic & financial features</p>
+                </div>
+                
+                <div class="method-card">
+                    <div class="method-icon">[M]</div>
+                    <h3>Models Tested</h3>
+                    <p><strong>Decision Tree:</strong> Early promise but overfitting<br>
+                    <strong>Random Forest:</strong> F1 Score 0.74, more stable</p>
+                </div>
+                
+                <div class="method-card">
+                    <div class="method-icon">[E]</div>
+                    <h3>Evaluation</h3>
+                    <p><strong>Metrics:</strong> Precision, Recall, F1-Score<br>
+                    <strong>Classes:</strong> Dropout, Enrolled, Graduate<br>
+                    <strong>Winner:</strong> Random Forest ensemble</p>
+                </div>
+                
+                <div class="method-card">
+                    <div class="method-icon">[T]</div>
+                    <h3>Tech Stack</h3>
+                    <p><strong>Python</strong> • Pandas • Scikit-learn<br>
+                    Matplotlib • Jupyter Notebook<br>
+                    Machine Learning Pipeline</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Impact & Applications -->
+    <section class="project-section impact">
+        <div class="container">
+            <h2 class="section-title">Impact & Applications</h2>
+            
+            <div class="impact-grid">
+                <div class="impact-card">
+                    <h3>🚨 Early Warning</h3>
+                    <p>Identify at-risk students in their first year for timely intervention and support.</p>
+                </div>
+                
+                <div class="impact-card">
+                    <h3>• Resource Optimization</h3>
+                    <p>Allocate counseling and support services efficiently based on risk predictions.</p>
+                </div>
+                
+                <div class="impact-card">
+                    <h3>• Policy Insights</h3>
+                    <p>Inform institutional policies with data-driven insights on student success factors.</p>
+                </div>
+                
+                <div class="impact-card">
+                    <h3>🎓 Success Tracking</h3>
+                    <p>Monitor intervention effectiveness and adjust retention strategies accordingly.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Key Insights -->
+    <section class="project-section insights">
+        <div class="container">
+            <div class="insights-content">
+                <h2>Key Insights</h2>
+                <div class="insight-highlights">
+                    <div class="insight">
+                        <strong>Random Forest > Decision Tree:</strong> Ensemble approach reduced overfitting and improved generalization
+                    </div>
+                    <div class="insight">
+                        <strong>Multi-factor Analysis:</strong> Financial status, academic performance, and application mode were strong predictors
+                    </div>
+                    <div class="insight">
+                        <strong>Stable Performance:</strong> Achieved consistent F1 Score of 0.74 across all three outcome classes
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Project Links -->
+    <section class="project-section links">
+        <div class="container">
+            <div class="links-grid">
+                <a href="https://github.com/kalyanivasave/Student-Prediction-Model" target="_blank" class="link-card primary">
+                    <div class="link-icon">{ }</div>
+                    <h4>GitHub Repository</h4>
+                    <p>Complete source code and Jupyter notebook</p>
+                </a>
+                
+                <a href="Projects/Student_Dropout_Prediction.pdf" target="_blank" class="link-card">
+                    <div class="link-icon">[PDF]</div>
+                    <h4>Case Study PDF</h4>
+                    <p>Detailed methodology and results</p>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Navigation -->
+    <section class="project-navigation">
+        <div class="container">
+            <div class="nav-links">
+                <a href="amazon-social-project.html" class="nav-link prev">
+                    Amazon Social
+                </a>
+                <a href="index_new.html#projects" class="nav-link home">
+                    All Projects
+                </a>
+                <a href="#" class="nav-link next">
+                    Next Project
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <div class="footer-brand">Kalyani Wasave</div>
+                    <div class="footer-tagline">Product • Growth • UX • Data</div>
+                </div>
+                
+                <div class="footer-col">
+                    <h4 class="footer-heading">Connect</h4>
+                    <ul class="footer-links">
+                        <li><a href="https://www.linkedin.com/in/kalyani-wasave-09789a76/" target="_blank">LinkedIn</a></li>
+                        <li><a href="https://github.com/kalyanivasave" target="_blank">GitHub</a></li>
+                        <li><a href="mailto:wasave.k@northeastern.edu">Email</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <div class="footer-copy">© 2025 Kalyani Wasave</div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script_new.js"></script>
+</body>
+</html>

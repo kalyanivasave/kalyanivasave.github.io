@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio Comparison - Choose Your Design</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 40px;
+        }
+        
+        .container {
+            max-width: 1200px;
+            width: 100%;
+        }
+        
+        h1 {
+            color: #fff;
+            text-align: center;
+            font-size: 48px;
+            margin-bottom: 16px;
+        }
+        
+        .subtitle {
+            color: rgba(255, 255, 255, 0.9);
+            text-align: center;
+            font-size: 20px;
+            margin-bottom: 60px;
+        }
+        
+        .cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+            gap: 40px;
+        }
+        
+        .card {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(20px);
+            border: 2px solid rgba(255, 255, 255, 0.2);
+            border-radius: 20px;
+            padding: 40px;
+            text-align: center;
+            transition: all 0.3s ease;
+        }
+        
+        .card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+            border-color: rgba(255, 255, 255, 0.4);
+        }
+        
+        .card-icon {
+            font-size: 64px;
+            margin-bottom: 20px;
+        }
+        
+        .card-title {
+            color: #fff;
+            font-size: 28px;
+            font-weight: 700;
+            margin-bottom: 12px;
+        }
+        
+        .card-desc {
+            color: rgba(255, 255, 255, 0.8);
+            font-size: 16px;
+            line-height: 1.6;
+            margin-bottom: 24px;
+        }
+        
+        .card-features {
+            text-align: left;
+            margin-bottom: 32px;
+        }
+        
+        .card-features li {
+            color: rgba(255, 255, 255, 0.9);
+            font-size: 14px;
+            line-height: 1.8;
+            padding-left: 24px;
+            position: relative;
+        }
+        
+        .card-features li::before {
+            content: '✓';
+            position: absolute;
+            left: 0;
+            color: #84cc16;
+            font-weight: 700;
+        }
+        
+        .btn {
+            display: inline-block;
+            padding: 16px 40px;
+            border-radius: 12px;
+            text-decoration: none;
+            font-size: 18px;
+            font-weight: 600;
+            transition: all 0.3s ease;
+        }
+        
+        .btn-new {
+            background: linear-gradient(135deg, #ff6b6b 0%, #ff8c42 100%);
+            color: #fff;
+            box-shadow: 0 8px 24px rgba(255, 107, 109, 0.4);
+        }
+        
+        .btn-new:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 12px 32px rgba(255, 107, 109, 0.5);
+        }
+        
+        .btn-original {
+            background: #fff;
+            color: #667eea;
+        }
+        
+        .btn-original:hover {
+            background: rgba(255, 255, 255, 0.9);
+        }
+        
+        .badge {
+            display: inline-block;
+            background: linear-gradient(135deg, #84cc16 0%, #10b981 100%);
+            color: #fff;
+            padding: 6px 16px;
+            border-radius: 20px;
+            font-size: 12px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            margin-bottom: 16px;
+        }
+        
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 32px;
+            }
+            
+            .cards {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🎨 Portfolio Comparison</h1>
+        <p class="subtitle">Choose which portfolio design you'd like to view</p>
+        
+        <div class="cards">
+            <!-- New Design Card -->
+            <div class="card">
+                <span class="badge">✨ New Design</span>
+                <div class="card-icon">🚀</div>
+                <h2 class="card-title">Stunning New Portfolio</h2>
+                <p class="card-desc">
+                    Modern, visually stunning single-page portfolio with Sentry-inspired design language and playful geometric characters.
+                </p>
+                <ul class="card-features">
+                    <li>Rich purple & coral gradients</li>
+                    <li>Custom geometric characters</li>
+                    <li>Smooth scroll animations</li>
+                    <li>Glass-morphism effects</li>
+                    <li>Counter animations for metrics</li>
+                    <li>Parallax effects</li>
+                    <li>Featured case studies</li>
+                    <li>Fully responsive design</li>
+                </ul>
+                <a href="index_new.html" class="btn btn-new">View New Design →</a>
+            </div>
+            
+            <!-- Original Design Card -->
+            <div class="card">
+                <div class="card-icon">📄</div>
+                <h2 class="card-title">Original Portfolio</h2>
+                <p class="card-desc">
+                    Your current portfolio design with traditional layout, detailed work experience, and academic projects.
+                </p>
+                <ul class="card-features">
+                    <li>Professional layout</li>
+                    <li>Detailed work experience</li>
+                    <li>Education section</li>
+                    <li>Project showcase</li>
+                    <li>Clean typography</li>
+                    <li>Mobile responsive</li>
+                    <li>Social media links</li>
+                    <li>Google Analytics tracking</li>
+                </ul>
+                <a href="index.html" class="btn btn-original">View Original →</a>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
