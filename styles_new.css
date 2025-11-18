@@ -4485,8 +4485,8 @@ body::before {
 }
 
 .stack-overview {
-    display: flex;
-    flex-direction: column;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
     gap: 3rem;
     margin-top: 2rem;
 }
@@ -4561,6 +4561,19 @@ body::before {
     border-radius: 6px;
     font-size: 0.8rem;
     font-weight: 500;
+}
+
+/* Stack Overview Responsive Design */
+@media (max-width: 1024px) {
+    .stack-overview {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .stack-overview {
+        grid-template-columns: 1fr;
+    }
 }
 
 /* Setup Guide Enhanced */
