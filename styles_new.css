@@ -3303,9 +3303,9 @@ body::before {
 }
 
 /* ═══════════════════════════════════════════════════════════
-   PHOTOGRAPHY SECTION
+   PHOTOGRAPHY SECTION - COMMENTED OUT - TO BE FIXED LATER
    ═══════════════════════════════════════════════════════ */
-
+/*
 .photography {
     padding: 120px 0;
     position: relative;
@@ -3397,6 +3397,7 @@ body::before {
     margin: 0 auto;
     animation: bounce 3s infinite ease-in-out;
 }
+*/
 
 /* ═══════════════════════════════════════════════════════════
    BLOG SECTION
@@ -3927,9 +3928,9 @@ body::before {
         padding: 40px;
     }
     
-    .photo-grid {
+    /* .photo-grid {
         grid-template-columns: 1fr;
-    }
+    } */
     
     .timeline {
         padding-left: 0;
