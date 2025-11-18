@@ -858,12 +858,14 @@ body::before {
     max-width: 900px;
     margin: 0 auto;
 }
-        font-size: 2.8rem;
-        font-weight: 700;
-        color: #fff;
-        margin-top: 64px;
-        margin-bottom: 40px;
-        letter-spacing: -1px;
+
+.roadmap-simple {
+    font-size: 2.8rem;
+    font-weight: 700;
+    color: #fff;
+    margin-top: 64px;
+    margin-bottom: 40px;
+    letter-spacing: -1px;
     border-radius: 10px;
     padding: 20px;
     text-align: center;
@@ -884,8 +886,9 @@ body::before {
 }
 
 /* Project Links - Compact */
-        margin-top: 40px;
-        margin-bottom: 18px;
+.roadmap-title {
+    margin-top: 40px;
+    margin-bottom: 18px;
 }
 
 .links-grid {
@@ -1061,6 +1064,7 @@ body::before {
     line-height: 1.6;
 }
 
+.stat-item {
     padding: 32px;
     text-align: center;
     margin-bottom: 48px;
@@ -1561,10 +1565,9 @@ body::before {
     margin-bottom: 16px;
     color: #fff;
     background: none;
-    -webkit-background-clip: unset;
+    -webkit-background-clip: padding-box;
     -webkit-text-fill-color: unset;
-    background-clip: unset;
-    text-fill-color: unset;
+    background-clip: padding-box;
 }
 .about-me-text {
     font-size: 18px;
@@ -3965,6 +3968,8 @@ body::before {
     
     .company-text-logo {
         font-size: 13px;
+    }
+    
     .education-logo {
         min-width: 80px;
         height: 80px;
