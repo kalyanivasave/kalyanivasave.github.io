@@ -354,7 +354,7 @@ body::before {
 
 .nav-logo {
     font-family: 'Space Grotesk', sans-serif;
-    font-size: 20px;
+    font-size: 28px;
     font-weight: 700;
     color: #fff;
     background: none;
@@ -379,23 +379,8 @@ body::before {
     transition: color 0.3s ease;
 }
 
-.nav-link::after {
-    content: '';
-    position: absolute;
-    bottom: -5px;
-    left: 0;
-    width: 0;
-    height: 2px;
-    background: #ff6b6b;
-    transition: width 0.3s ease;
-}
-
 .nav-link:hover {
     color: #fff;
-}
-
-.nav-link:hover::after {
-    width: 100%;
 }
 
 .nav-actions {
@@ -405,36 +390,36 @@ body::before {
 }
 
 .btn-primary-nav {
-    background: linear-gradient(135deg, #ff6b6b 0%, #ff8c42 100%);
-    color: #fff;
-    padding: 12px 28px;
+    background: linear-gradient(135deg, #00eaff 0%, #00d4ff 100%);
+    color: #1a1f3a;
+    padding: 8px 16px;
     border-radius: 8px;
     text-decoration: none;
-    font-size: 16px;
+    font-size: 14px;
     font-weight: 600;
-    box-shadow: 0 4px 12px rgba(255, 107, 109, 0.4);
+    box-shadow: 0 4px 12px rgba(0, 234, 255, 0.4);
     transition: all 0.3s ease;
 }
 
 .btn-primary-nav:hover {
     transform: translateY(-2px);
-    box-shadow: 0 6px 20px rgba(255, 107, 109, 0.5);
+    box-shadow: 0 6px 20px rgba(0, 234, 255, 0.5);
 }
 
 .btn-secondary-nav {
     background: transparent;
-    color: #ff6b6b;
-    padding: 12px 28px;
+    color: #00eaff;
+    padding: 8px 16px;
     border-radius: 8px;
     text-decoration: none;
-    font-size: 16px;
+    font-size: 14px;
     font-weight: 600;
-    border: 2px solid #ff6b6b;
+    border: 2px solid #00eaff;
     transition: all 0.3s ease;
 }
 
 .btn-secondary-nav:hover {
-    background: #ff6b6b;
+    background: #00eaff;
     color: #fff;
 }
 
@@ -1615,8 +1600,8 @@ body::before {
 
 /* Button Styles */
 .btn-primary {
-    background: linear-gradient(135deg, #ff6b6b 0%, #ff8c42 100%);
-    color: #fff;
+    background: linear-gradient(135deg, #00eaff 0%, #00d4ff 100%);
+    color: #1a1f3a;
     padding: 12px 24px;
     border-radius: 8px;
     text-decoration: none;
@@ -1625,13 +1610,13 @@ body::before {
     align-items: center;
     gap: 8px;
     transition: all 0.3s ease;
-    box-shadow: 0 4px 15px rgba(255, 107, 107, 0.3);
+    box-shadow: 0 4px 15px rgba(0, 234, 255, 0.3);
 }
 
 .btn-primary:hover {
-    background: linear-gradient(135deg, #ff8c42 0%, #ffa726 100%);
+    background: linear-gradient(135deg, #00d4ff 0%, #00bfff 100%);
     transform: translateY(-2px);
-    box-shadow: 0 6px 20px rgba(255, 107, 107, 0.4);
+    box-shadow: 0 6px 20px rgba(0, 234, 255, 0.4);
 }
 
 .btn-secondary {
@@ -1860,32 +1845,32 @@ body::before {
 }
 
 .btn-primary {
-    background: linear-gradient(135deg, #ff6b6b 0%, #ff8c42 100%);
-    color: #fff;
-    padding: 16px 40px;
+    background: linear-gradient(135deg, #00eaff 0%, #00d4ff 100%);
+    color: #1a1f3a;
+    padding: 10px 20px;
     border-radius: 8px;
     text-decoration: none;
-    font-size: 16px;
+    font-size: 14px;
     font-weight: 600;
     display: inline-flex;
     align-items: center;
     gap: 8px;
-    box-shadow: 0 4px 15px rgba(255, 107, 107, 0.3);
+    box-shadow: 0 4px 15px rgba(0, 234, 255, 0.3);
     transition: all 0.3s ease;
 }
 
 .btn-primary:hover {
     transform: translateY(-4px);
-    box-shadow: 0 12px 32px rgba(255, 107, 109, 0.5);
+    box-shadow: 0 12px 32px rgba(0, 234, 255, 0.5);
 }
 
 .btn-secondary {
     background: transparent;
     color: #fff;
-    padding: 16px 40px;
+    padding: 10px 20px;
     border-radius: 8px;
     text-decoration: none;
-    font-size: 16px;
+    font-size: 14px;
     font-weight: 600;
     border: 2px solid rgba(255, 255, 255, 0.3);
     transition: all 0.3s ease;
@@ -1919,21 +1904,11 @@ body::before {
     height: 100%;
     border-radius: 50%;
     object-fit: cover;
-    border: 5px solid rgba(138, 92, 246, 0.3);
-    box-shadow: 0 20px 60px rgba(138, 92, 246, 0.4);
     animation: photoFloat 3s infinite ease-in-out;
 }
 
 .photo-glow {
-    position: absolute;
-    top: -10px;
-    left: -10px;
-    right: -10px;
-    bottom: -10px;
-    border-radius: 50%;
-    background: radial-gradient(circle, rgba(138, 92, 246, 0.3) 0%, transparent 70%);
-    animation: glowPulse 3s infinite ease-in-out;
-    z-index: -1;
+    display: none;
 }
 
 @keyframes photoFloat {
@@ -2152,17 +2127,6 @@ body::before {
     75% {
         transform: scale(1.05) translateY(-2px);
         opacity: 0.98;
-    }
-}
-
-@keyframes glowPulse {
-    0%, 100% {
-        opacity: 0.15;
-        transform: scale(1);
-    }
-    50% {
-        opacity: 0.3;
-        transform: scale(1.1);
     }
 }
 
@@ -2412,9 +2376,10 @@ body::before {
    ═══════════════════════════════════════════════════════ */
 
 .projects {
-    padding: 0 0 120px 0;
+    padding: 60px 0 120px 0;
     position: relative;
     z-index: 2;
+    background: #ffffff;
 }
 
 .projects-grid {
@@ -2424,7 +2389,7 @@ body::before {
 }
 
 .project-card {
-    background: rgba(255, 255, 255, 0.05);
+    background: #1a1f3a;
     border: 1px solid rgba(138, 92, 246, 0.15);
     border-radius: 16px;
     padding: 32px;
@@ -2447,8 +2412,8 @@ body::before {
     position: absolute;
     top: 24px;
     left: 24px;
-    background: linear-gradient(135deg, #ff6b6b 0%, #ff8c42 100%);
-    color: #fff;
+    background: linear-gradient(135deg, #00eaff 0%, #00d4ff 100%);
+    color: #1a1f3a;
     padding: 6px 16px;
     border-radius: 20px;
     font-size: 12px;
@@ -2578,7 +2543,7 @@ body::before {
 }
 
 .project-cta {
-    color: #ff6b6b;
+    color: #00eaff;
     text-decoration: none;
     font-size: 16px;
     font-weight: 600;
@@ -2590,7 +2555,7 @@ body::before {
 
 .project-cta:hover {
     gap: 8px;
-    color: #ff8c42;
+    color: #00d4ff;
 }
 
 /* Project Buttons Container */
@@ -2664,20 +2629,20 @@ body::before {
 }
 
 .project-cta.primary {
-    color: #fff;
-    background: linear-gradient(135deg, #ff6b6b 0%, #ff8c42 100%);
+    color: #1a1f3a;
+    background: linear-gradient(135deg, #00eaff 0%, #00d4ff 100%);
     padding: 10px 20px;
     border-radius: 8px;
     border: none;
     font-weight: 600;
     transition: all 0.3s ease;
-    box-shadow: 0 4px 15px rgba(255, 107, 107, 0.3);
+    box-shadow: 0 4px 15px rgba(0, 234, 255, 0.3);
 }
 
 .project-cta.primary:hover {
-    background: linear-gradient(135deg, #ff8c42 0%, #ffa726 100%);
+    background: linear-gradient(135deg, #00d4ff 0%, #00bfff 100%);
     transform: translateY(-2px);
-    box-shadow: 0 6px 20px rgba(255, 107, 107, 0.4);
+    box-shadow: 0 6px 20px rgba(0, 234, 255, 0.4);
 }
 
 /* Project Detail Sections */
