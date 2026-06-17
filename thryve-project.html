@@ -1,0 +1,584 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thryve: K-12 Classroom Readiness Platform | Kalyani Wasave</title>
+    <meta name="description" content="Thryve: A K-12 classroom readiness platform built to help teachers understand and support student readiness in real time.">
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700;800;900&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="styles_redesigned.css">
+    <style>
+        .project-detail-hero {
+            background: linear-gradient(135deg, #e8f7f5 0%, #d4f1e8 100%);
+            padding: 60px 20px;
+            margin-bottom: 60px;
+        }
+
+        .project-detail-container {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .project-detail-header {
+            margin-bottom: 40px;
+        }
+
+        .project-detail-header .project-category {
+            color: #1b8b6f;
+            font-weight: 600;
+            font-size: 14px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 12px;
+        }
+
+        .project-detail-header h1 {
+            font-size: 48px;
+            font-weight: 800;
+            color: #1a1a1a;
+            line-height: 1.2;
+            margin-bottom: 16px;
+            font-family: 'Space Grotesk', sans-serif;
+        }
+
+        .project-tagline {
+            font-size: 20px;
+            color: #444;
+            line-height: 1.6;
+            max-width: 700px;
+            font-weight: 500;
+        }
+
+        .project-detail-content {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .section-block {
+            margin-bottom: 50px;
+            padding: 40px;
+            background: #fafbfa;
+            border-radius: 12px;
+            border-left: 5px solid #1b8b6f;
+        }
+
+        .section-block h2 {
+            font-size: 28px;
+            font-weight: 700;
+            color: #1a1a1a;
+            margin-bottom: 24px;
+            font-family: 'Space Grotesk', sans-serif;
+        }
+
+        .section-block h3 {
+            font-size: 18px;
+            font-weight: 600;
+            color: #2a2a2a;
+            margin-top: 24px;
+            margin-bottom: 16px;
+        }
+
+        .section-block h3:first-child {
+            margin-top: 0;
+        }
+
+        .section-block p {
+            font-size: 16px;
+            line-height: 1.8;
+            color: #333;
+            margin-bottom: 16px;
+        }
+
+        .section-block ul {
+            list-style: none;
+            padding-left: 0;
+            margin: 16px 0 24px 0;
+        }
+
+        .section-block li {
+            font-size: 16px;
+            line-height: 1.8;
+            color: #333;
+            margin-bottom: 12px;
+            padding-left: 28px;
+            position: relative;
+        }
+
+        .section-block li:before {
+            content: "✓";
+            position: absolute;
+            left: 0;
+            color: #1b8b6f;
+            font-weight: bold;
+            font-size: 18px;
+        }
+
+        .insight-box {
+            background: white;
+            border: 2px solid #d4f1e8;
+            border-radius: 8px;
+            padding: 24px;
+            margin: 24px 0;
+            font-style: italic;
+            color: #555;
+            border-left: 5px solid #1b8b6f;
+        }
+
+        .dashboard-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+            margin-top: 24px;
+        }
+
+        .dashboard-card {
+            background: white;
+            padding: 24px;
+            border-radius: 8px;
+            border: 1px solid #e0e8e0;
+            border-left: 4px solid #1b8b6f;
+        }
+
+        .dashboard-card h4 {
+            color: #1b8b6f;
+            font-weight: 700;
+            margin-bottom: 12px;
+            font-size: 16px;
+        }
+
+        .dashboard-card .card-section {
+            margin-top: 16px;
+            margin-bottom: 12px;
+        }
+
+        .dashboard-card .card-section-label {
+            color: #999;
+            font-size: 12px;
+            text-transform: uppercase;
+            font-weight: 600;
+            margin-bottom: 8px;
+            letter-spacing: 0.5px;
+        }
+
+        .dashboard-card p {
+            color: #555;
+            font-size: 14px;
+            line-height: 1.6;
+        }
+
+        .dashboard-card ul {
+            margin: 12px 0;
+            padding-left: 0;
+        }
+
+        .dashboard-card li {
+            font-size: 14px;
+            color: #555;
+            margin-bottom: 8px;
+            padding-left: 20px;
+        }
+
+        .dashboard-card li:before {
+            content: "•";
+            color: #1b8b6f;
+            font-weight: bold;
+            margin-left: -16px;
+            margin-right: 8px;
+        }
+
+        .principles-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 20px;
+            margin-top: 24px;
+        }
+
+        .principle-item {
+            background: white;
+            padding: 24px;
+            border-radius: 8px;
+            border: 1px solid #e0e8e0;
+            border-left: 4px solid #1b8b6f;
+        }
+
+        .principle-item h4 {
+            color: #1b8b6f;
+            font-weight: 700;
+            margin-bottom: 12px;
+            font-size: 16px;
+        }
+
+        .principle-item p {
+            color: #555;
+            font-size: 15px;
+            line-height: 1.7;
+            margin-bottom: 12px;
+        }
+
+        .principle-item ul {
+            margin: 12px 0;
+        }
+
+        .principle-item li {
+            font-size: 15px;
+            color: #555;
+            line-height: 1.6;
+            margin-bottom: 10px;
+            padding-left: 24px;
+        }
+
+        .principle-item li:before {
+            content: "→";
+            position: absolute;
+            color: #1b8b6f;
+            font-weight: bold;
+            margin-left: -20px;
+        }
+
+        .expertise-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 20px;
+            margin-top: 24px;
+        }
+
+        .expertise-item {
+            background: white;
+            padding: 24px;
+            border-radius: 8px;
+            border: 1px solid #e0e8e0;
+            border-left: 4px solid #1b8b6f;
+        }
+
+        .expertise-item h4 {
+            color: #1b8b6f;
+            font-weight: 700;
+            margin-bottom: 12px;
+            font-size: 16px;
+        }
+
+        .expertise-item ul {
+            list-style: none;
+            padding-left: 0;
+            margin: 12px 0;
+        }
+
+        .expertise-item li {
+            font-size: 15px;
+            color: #555;
+            line-height: 1.7;
+            margin-bottom: 10px;
+            padding-left: 24px;
+            position: relative;
+        }
+
+        .expertise-item li:before {
+            content: "◆";
+            position: absolute;
+            left: 4px;
+            color: #1b8b6f;
+            font-size: 8px;
+        }
+
+        .tech-stack {
+            background: white;
+            padding: 24px;
+            border-radius: 8px;
+            border: 1px solid #e0e8e0;
+            margin-top: 24px;
+        }
+
+        .tech-stack h4 {
+            color: #1b8b6f;
+            font-weight: 700;
+            margin-bottom: 16px;
+            font-size: 16px;
+        }
+
+        .tech-stack-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 12px;
+        }
+
+        .tech-badge {
+            background: #f0f9f7;
+            padding: 10px 14px;
+            border-radius: 6px;
+            border: 1px solid #d4f1e8;
+            color: #1b8b6f;
+            font-weight: 600;
+            font-size: 13px;
+            text-align: center;
+        }
+
+        .impact-highlight {
+            background: linear-gradient(135deg, #e8f7f5 0%, #d4f1e8 100%);
+            padding: 24px;
+            border-radius: 8px;
+            margin: 24px 0;
+            border-left: 5px solid #1b8b6f;
+        }
+
+        .impact-highlight p {
+            color: #1b8b6f;
+            font-weight: 600;
+            font-size: 16px;
+            line-height: 1.6;
+            margin: 0;
+        }
+
+        .cta-section {
+            text-align: center;
+            padding: 60px 20px;
+            background: linear-gradient(135deg, #e8f7f5 0%, #d4f1e8 100%);
+            border-radius: 12px;
+            margin: 60px 0;
+            border: 2px solid #d4f1e8;
+        }
+
+        .cta-section h2 {
+            font-size: 32px;
+            font-weight: 700;
+            color: #1a1a1a;
+            margin-bottom: 16px;
+        }
+
+        .cta-section p {
+            font-size: 16px;
+            color: #555;
+            margin-bottom: 24px;
+        }
+
+        .cta-buttons {
+            display: flex;
+            gap: 16px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        @media (max-width: 768px) {
+            .project-detail-header h1 {
+                font-size: 32px;
+            }
+
+            .project-tagline {
+                font-size: 16px;
+            }
+
+            .section-block {
+                padding: 24px;
+            }
+
+            .dashboard-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .cta-buttons {
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="main-nav" id="mainNav">
+        <div class="nav-container">
+            <div class="nav-logo">Kalyani Wasave</div>
+            
+            <div class="nav-links" id="navLinks">
+                <a href="index.html#hero" class="nav-link">About</a>
+                <a href="index.html#experience" class="nav-link">Experience</a>
+                <a href="index.html#education" class="nav-link">Education</a>
+                <a href="index.html#projects" class="nav-link">Projects</a>
+            </div>
+            
+            <div class="nav-actions">
+                <a href="index.html#contact" class="btn-primary">Get In Touch</a>
+            </div>
+            
+            <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Mobile Menu -->
+    <div class="mobile-menu" id="mobileMenu">
+        <a href="index.html#hero" class="mobile-link">About</a>
+        <a href="index.html#experience" class="mobile-link">Experience</a>
+        <a href="index.html#education" class="mobile-link">Education</a>
+        <a href="index.html#projects" class="mobile-link">Projects</a>
+        <a href="index.html#contact" class="mobile-link">Contact</a>
+    </div>
+
+    <!-- Hero Section -->
+    <div class="project-detail-hero">
+        <div class="project-detail-container">
+            <div class="project-detail-header">
+                <div class="project-category">K-12 EdTech • Product Design • React</div>
+                <h1>Thryve: K-12 Classroom Readiness Platform</h1>
+                <p class="project-tagline">A classroom readiness platform that gives teachers real-time visibility into student states and enables them to provide targeted, evidence-backed support without disrupting instruction.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Main Content -->
+    <div class="project-detail-content">
+        
+        <div class="section-block">
+            <h2>Problem</h2>
+            <p>Students often start class with varying levels of readiness—some carry over stress or distraction, others are cognitively overloaded. Teachers notice these patterns but lack real-time visibility into readiness states and structured support options that don't disrupt instruction. As a result, learning often begins on schedule rather than when students are actually ready.</p>
+        </div>
+
+        <div class="section-block">
+            <h2>Solution</h2>
+            <p>Built a K-12 platform that provides real-time readiness signals and allows teachers to deliver targeted support in the moment. The platform includes:</p>
+            <ul>
+                <li>Student readiness check-ins that are quick and age-appropriate</li>
+                <li>Teacher dashboard showing class readiness overview</li>
+                <li>Evidence-based micro-interventions (focus reset, grounding, clarity support, reflection prompts)</li>
+                <li>SEL module library aligned with CASEL and TEKS</li>
+                <li>Role-specific experiences for teachers, students, parents, and administrators</li>
+                <li>Skill tracking across emotional regulation, social awareness, and decision-making</li>
+            </ul>
+        </div>
+
+    
+
+        <div class="section-block">
+            <h2>Key Accomplishments</h2>
+            <ul>
+                <li>Multi-stakeholder design: separate, tailored experiences for teachers, students, parents, and school administrators</li>
+                <li>Age-adaptive interfaces for K-5, 6-8, and 9-12 grade bands</li>
+                <li>CASEL and TEKS alignment ensuring standards-based content</li>
+                <li>Privacy-first architecture with role-based visibility controls</li>
+                <li>Evidence-informed intervention architecture mapped to learning science research</li>
+                <li>Professional iconography and consistent design system</li>
+            </ul>
+        </div>
+
+        <div class="section-block">
+            <h2>Dashboards & Experiences</h2>
+            
+            <div class="dashboard-grid">
+                <div class="dashboard-card">
+                    <h4>Teacher Dashboard</h4>
+                    <ul>
+                        <li>Real-time class readiness overview</li>
+                        <li>Launch and monitor check-in sessions</li>
+                        <li>Student progress grid</li>
+                        <li>SEL module access</li>
+                        <li>Trend tracking over time</li>
+                    </ul>
+                </div>
+
+                <div class="dashboard-card">
+                    <h4>Student Interface</h4>
+                    <ul>
+                        <li>Daily readiness check-ins</li>
+                        <li>Personal skill development tracking</li>
+                        <li>Quick access to support exercises</li>
+                        <li>Activity history</li>
+                    </ul>
+                </div>
+
+                <div class="dashboard-card">
+                    <h4>Parent Portal</h4>
+                    <ul>
+                        <li>Weekly progress updates</li>
+                        <li>Skill development trends</li>
+                        <li>Growth highlights</li>
+                        <li>Home reinforcement tips</li>
+                    </ul>
+                </div>
+
+                <div class="dashboard-card">
+                    <h4>Admin Dashboard</h4>
+                    <ul>
+                        <li>Grade-level readiness patterns</li>
+                        <li>School-wide SEL trends</li>
+                        <li>Program effectiveness metrics</li>
+                        <li>Aggregated insights only (privacy-protected)</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="section-block">
+            <h2>Frameworks & Compliance</h2>
+            <ul>
+                <li><strong>CASEL Aligned:</strong> Supports development of self-awareness, self-management, social awareness, relationship skills, and responsible decision-making</li>
+                <li><strong>TEKS Compatible:</strong> Aligned with Texas Essential Knowledge and Skills standards</li>
+                <li><strong>Evidence-Based:</strong> Grounded in cognitive load theory and learning science research</li>
+            </ul>
+            <p style="margin-top: 16px;"><strong>Note:</strong> Thryve is a support tool for classroom readiness, not a diagnostic or clinical instrument.</p>
+        </div>
+
+        <div class="section-block">
+            <h2>Skills Demonstrated</h2>
+            
+            <h3>Product & Design</h3>
+            <ul>
+                <li>Identified a clear gap in K-12 education: real-time readiness visibility for teachers</li>
+                <li>Designed multiple role-based experiences for different stakeholders</li>
+                <li>Built age-adaptive interfaces across grade bands</li>
+                <li>Deep knowledge of SEL frameworks and K-12 classroom dynamics</li>
+            </ul>
+        </div>
+
+        <div class="cta-section">
+            <h2>Let's Connect</h2>
+            <p>I'm interested in building products for K-12 education that solve real problems for teachers and students.</p>
+            <div class="cta-buttons">
+                <a href="index.html#contact" class="btn-primary">Get In Touch</a>
+                <a href="https://www.linkedin.com/in/kalyani-wasave-09789a76/" target="_blank" class="btn-secondary">LinkedIn</a>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2025 Kalyani Wasave. Crafted with thoughtfulness and attention to detail.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile menu toggle
+        const hamburger = document.getElementById('hamburger');
+        const mobileMenu = document.getElementById('mobileMenu');
+
+        hamburger.addEventListener('click', () => {
+            mobileMenu.classList.toggle('active');
+        });
+
+        // Close menu when link is clicked
+        document.querySelectorAll('.mobile-link').forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.remove('active');
+            });
+        });
+
+        // Smooth scroll
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({ behavior: 'smooth' });
+                }
+            });
+        });
+    </script>
+</body>
+</html>
