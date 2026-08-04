@@ -223,6 +223,28 @@ a:hover {
     font-weight: 400;
 }
 
+/* AI section styling */
+.ai-section {
+    margin-top: 0.75rem;
+}
+.ai-main {
+    font-size: 1.125rem;
+    color: var(--dark-blue);
+    margin: 0 0 0.5rem 0;
+    font-weight: 700;
+}
+.ai-sub {
+    font-size: 0.98rem;
+    color: var(--dark-blue);
+    margin: 1rem 0 0.25rem 0;
+    font-weight: 600;
+    opacity: 0.95;
+}
+.ai-section p {
+    color: var(--text-gray);
+    margin-bottom: 0.9rem;
+}
+
 .hero-cta {
     display: flex;
     gap: 1rem;
