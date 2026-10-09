@@ -1689,6 +1689,32 @@ button:focus-visible {
     content: '';
 }
 
+.systems-list {
+    display: grid;
+    gap: 0.9rem;
+    margin-top: 1.5rem;
+    padding-top: 1.35rem;
+    border-top: 1px solid var(--border-color);
+}
+
+.systems-list > .aside-label {
+    margin-bottom: 0;
+}
+
+.system-item h3 {
+    margin: 0 0 0.2rem;
+    color: var(--dark-blue);
+    font-size: 0.82rem;
+    font-weight: 700;
+}
+
+.system-item p {
+    margin: 0;
+    color: var(--text-gray);
+    font-size: 0.78rem;
+    line-height: 1.55;
+}
+
 .education-note {
     display: flex;
     gap: 0.8rem;
@@ -2447,6 +2473,27 @@ button:focus-visible {
     line-height: 1.9;
 }
 
+.about-looking {
+    margin-left: 4rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid var(--border-color);
+}
+
+.about-looking h3 {
+    margin: 0 0 0.65rem;
+    color: var(--dark-blue);
+    font-family: var(--font-heading);
+    font-size: 1.16rem;
+    font-weight: 600;
+}
+
+.about-looking p {
+    margin: 0;
+    color: #58645f;
+    font-size: 0.97rem;
+    line-height: 1.9;
+}
+
 .about-aside {
     padding: 1.75rem;
 }
@@ -2459,6 +2506,12 @@ button:focus-visible {
 .about-invitation {
     font-size: 0.88rem;
     line-height: 1.75;
+}
+
+@media (max-width: 480px) {
+    .about-looking {
+        margin-left: 2.6rem;
+    }
 }
 
 .timeline-container {
