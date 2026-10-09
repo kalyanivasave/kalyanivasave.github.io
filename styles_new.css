@@ -490,7 +490,7 @@ body::before {
 .container {
     max-width: 1400px;
     margin: 0 auto;
-    padding: 0 60px;
+    padding: 0 clamp(1rem, 4.167vw, 3.75rem);
     position: relative;
     z-index: 2;
 }

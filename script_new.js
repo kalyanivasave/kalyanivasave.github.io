@@ -18,6 +18,7 @@ const mobileLinks = document.querySelectorAll('.mobile-link');
 hamburger.addEventListener('click', () => {
     mobileMenu.classList.toggle('active');
     hamburger.classList.toggle('active');
+    hamburger.setAttribute('aria-expanded', mobileMenu.classList.contains('active'));
     
     // Animate hamburger icon
     const spans = hamburger.querySelectorAll('span');
@@ -37,6 +38,7 @@ mobileLinks.forEach(link => {
     link.addEventListener('click', () => {
         mobileMenu.classList.remove('active');
         hamburger.classList.remove('active');
+        hamburger.setAttribute('aria-expanded', 'false');
         
         const spans = hamburger.querySelectorAll('span');
         spans[0].style.transform = 'none';
@@ -45,13 +47,27 @@ mobileLinks.forEach(link => {
     });
 });
 
+document.addEventListener('keydown', (event) => {
+    if (event.key === 'Escape' && mobileMenu.classList.contains('active')) {
+        mobileMenu.classList.remove('active');
+        hamburger.classList.remove('active');
+        hamburger.setAttribute('aria-expanded', 'false');
+
+        const spans = hamburger.querySelectorAll('span');
+        spans[0].style.transform = 'none';
+        spans[1].style.opacity = '1';
+        spans[2].style.transform = 'none';
+        hamburger.focus();
+    }
+});
+
 // Smooth scroll for navigation links
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function (e) {
         e.preventDefault();
         const target = document.querySelector(this.getAttribute('href'));
         if (target) {
-            const offset = 80; // Height of fixed nav
+            const offset = window.innerWidth <= 760 ? 80 : 32;
             const targetPosition = target.offsetTop - offset;
             window.scrollTo({
                 top: targetPosition,
