@@ -2345,99 +2345,63 @@ button:focus-visible {
     }
 }
 
-/* ===== FIXED SIDE NAV, EXPERIENCE READABILITY, AND QUIET FOOTER ===== */
+/* ===== DESKTOP TOP NAVIGATION ===== */
 @media (min-width: 981px) {
-    body {
-        margin-left: 228px;
-    }
-
     .main-nav {
-        position: fixed;
-        inset: 0 auto 0 0;
-        width: 228px;
-        border-right: 1px solid var(--border-color);
-        border-bottom: 0;
-        background: var(--white);
-        box-shadow: none;
-        backdrop-filter: none;
+        position: sticky;
+        top: 0;
+        width: 100%;
+        border-right: 0;
+        border-bottom: 1px solid rgba(37, 91, 82, 0.18);
+        background: rgba(241, 246, 243, 0.97);
+        box-shadow: 0 4px 16px rgba(30, 48, 45, 0.06);
+        backdrop-filter: blur(16px);
     }
 
     .nav-container {
         display: flex;
         width: 100%;
-        height: 100%;
-        max-width: none;
-        padding: 2.25rem 1.5rem 1.75rem;
-        flex-direction: column;
-        align-items: stretch;
-        justify-content: flex-start;
-        gap: 0;
+        min-height: 88px;
+        padding: 0 1.5rem;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        gap: 1rem;
     }
 
     .nav-logo {
-        font-size: 1.3rem;
+        flex-shrink: 0;
+        font-size: 1.1rem;
         font-weight: 700;
     }
 
     .nav-links {
         display: flex;
-        margin-top: clamp(3rem, 9vh, 5.5rem);
-        flex-direction: column;
-        gap: 0.6rem;
+        margin-top: 0;
+        flex-direction: row;
+        gap: 1.1rem;
     }
 
     .nav-link {
         position: relative;
         display: flex;
-        min-height: 54px;
-        padding: 0 0.85rem;
+        min-height: 44px;
+        padding: 0;
         align-items: center;
-        color: var(--text-dark);
-        border: 1px solid transparent;
-        border-radius: 7px;
-        font-size: 1.04rem;
-        font-weight: 600;
-        letter-spacing: -0.015em;
-        transition: background-color 180ms ease, border-color 180ms ease, color 180ms ease, transform 180ms ease;
-    }
-
-    .nav-link::after {
-        display: none;
-    }
-
-    .nav-link::before {
-        width: 3px;
-        height: 0;
-        margin-right: 0;
-        border-radius: 2px;
-        background: var(--teal-accent);
-        content: "";
-        transition: height 180ms ease, margin-right 180ms ease;
-    }
-
-    .nav-link:hover,
-    .nav-link.active {
-        transform: translateX(2px);
-        border-color: rgba(37, 91, 82, 0.12);
-        background: rgba(37, 91, 82, 0.06);
-        color: var(--primary-blue);
-    }
-
-    .nav-link:hover::before,
-    .nav-link.active::before {
-        height: 1.35rem;
-        margin-right: 0.7rem;
+        color: var(--text-gray);
+        font-size: 0.9rem;
+        font-weight: 500;
     }
 
     .nav-actions {
         display: flex;
-        margin-top: auto;
-        padding-top: 1.25rem;
+        flex-shrink: 0;
+        margin-top: 0;
+        padding-top: 0;
     }
 
     .nav-actions .btn-primary {
-        width: 100%;
-        padding-inline: 0.75rem;
+        padding: 0.65rem 1rem;
         text-align: center;
     }
 }
@@ -3426,6 +3390,8 @@ button:focus-visible {
 .hero-right-col {
     justify-content: center;
     text-align: center;
+    align-items: center;
+    flex-direction: column;
 }
 
 .profile-card {
@@ -3537,88 +3503,46 @@ button:focus-visible {
     }
 }
 
-/* ===== NAVIGATION SOCIAL LINKS ===== */
+/* ===== PROFILE SOCIAL LINKS ===== */
 .nav-social-links {
-    display: none;
+    display: flex;
+    width: min(100%, 360px);
+    margin-top: 1.35rem;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 0.35rem 0.8rem;
 }
 
-@media (min-width: 981px) {
-    .nav-social-links {
-        display: flex;
-        margin-top: 2rem;
-        padding: 1.25rem 0.85rem 0;
-        flex-direction: column;
-        gap: 0.45rem;
-        border-top: 1px solid var(--border-color);
-    }
-
-    .nav-social-heading,
-    .mobile-social-heading {
-        margin: 0 0 0.35rem;
-        color: var(--text-gray);
-        font-size: 0.68rem;
-        font-weight: 700;
-        letter-spacing: 0.1em;
-        text-transform: uppercase;
-    }
-
-    .nav-social-links a,
-    .mobile-social-links a {
-        display: flex;
-        min-height: 36px;
-        align-items: center;
-        gap: 0.7rem;
-        color: var(--text-gray);
-        font-size: 0.9rem;
-        font-weight: 500;
-    }
-
-    .nav-social-links a:hover {
-        color: var(--primary-blue);
-        transform: translateX(2px);
-    }
-
-    .nav-social-links img,
-    .mobile-social-links img {
-        width: 18px;
-        height: 18px;
-        object-fit: contain;
-    }
-
-    .mobile-social-links {
-        display: none;
-    }
+.nav-social-heading {
+    width: 100%;
+    margin: 0 0 0.2rem;
+    color: var(--text-gray);
+    font-size: 0.68rem;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    text-align: center;
+    text-transform: uppercase;
 }
 
-@media (max-width: 980px) {
-    .mobile-social-links {
-        display: flex;
-        margin: 0.75rem 1.5rem 0;
-        padding-top: 1rem;
-        flex-direction: column;
-        gap: 0.25rem;
-        border-top: 1px solid var(--border-color);
-    }
+.nav-social-links a {
+    display: inline-flex;
+    min-height: 36px;
+    align-items: center;
+    gap: 0.4rem;
+    color: var(--text-gray);
+    font-size: 0.78rem;
+    font-weight: 500;
+    transition: color 180ms ease, transform 180ms ease;
+}
 
-    .mobile-social-heading {
-        margin-bottom: 0.25rem;
-    }
+.nav-social-links a:hover {
+    color: var(--primary-blue);
+    transform: translateY(-2px);
+}
 
-    .mobile-social-links a {
-        display: flex;
-        min-height: 40px;
-        align-items: center;
-        gap: 0.75rem;
-        color: var(--text-gray);
-    }
-
-    .mobile-social-links a:hover {
-        color: var(--primary-blue);
-    }
-
-    .mobile-social-links img {
-        width: 18px;
-        height: 18px;
-        object-fit: contain;
-    }
+.nav-social-links img {
+    width: 18px;
+    height: 18px;
+    object-fit: contain;
 }
