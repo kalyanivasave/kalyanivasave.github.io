@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 400" role="img" aria-label="An order flowing from quote to order to BOM to plant, bouncing back from the plant, with the fix pointing to the rule at the start">
+  <rect width="640" height="400" fill="#F5F3EE"/>
+  <g font-family="Inter, Arial, sans-serif" font-size="17" font-weight="600" text-anchor="middle">
+    <g fill="#FFFFFF" stroke="#263431" stroke-width="2.5">
+      <rect x="30" y="160" width="110" height="64" rx="12"/><rect x="180" y="160" width="110" height="64" rx="12"/>
+      <rect x="330" y="160" width="110" height="64" rx="12"/><rect x="480" y="160" width="130" height="64" rx="12"/>
+    </g>
+    <g fill="#263431"><text x="85" y="198">Quote</text><text x="235" y="198">Order</text><text x="385" y="198">BOM</text><text x="545" y="198">Plant</text></g>
+    <g stroke="#66736E" stroke-width="4" fill="none" stroke-linecap="round"><path d="M142 192h30"/><path d="M292 192h30"/><path d="M442 192h30"/></g>
+    <g fill="#66736E"><path d="M172 184l12 8-12 8z"/><path d="M322 184l12 8-12 8z"/><path d="M472 184l12 8-12 8z"/></g>
+    <path d="M545 226C545 300 245 300 238 232" fill="none" stroke="#B42318" stroke-width="5" stroke-linecap="round" stroke-dasharray="2 12"/>
+    <path d="M228 244l10-16 10 16z" fill="#B42318"/>
+    <rect x="300" y="282" width="150" height="38" rx="19" fill="#B42318"/>
+    <text x="375" y="307" fill="#FFFFFF">Order fallout</text>
+    <path d="M85 158C85 90 200 76 260 92" fill="none" stroke="#263431" stroke-width="3" stroke-linecap="round"/>
+    <path d="M254 82l14 12-18 6z" fill="#263431"/>
+    <rect x="262" y="66" width="240" height="44" rx="22" fill="#263431"/>
+    <text x="382" y="94" fill="#FFFFFF">Fix the rule, not the order</text>
+  </g>
+</svg>

@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>150% BOM: definition and examples | Kalyani Wasave</title>
+<meta name="description" content="One bill of materials that holds every part any variant of a product family could need, with a condition on each line that decides when it is used.">
+<meta property="og:title" content="150% BOM: definition and examples | Kalyani Wasave">
+<meta property="og:description" content="One bill of materials that holds every part any variant of a product family could need, with a condition on each line that decides when it is used.">
+<meta property="og:image" content="https://kalyanivasave.github.io/assets/img/rules-lab.png">
+<meta name="theme-color" content="#255B52">
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-K572SWW9');</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/assets/site.css">
+<link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
+</head>
+<body>
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-K572SWW9" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<a class="skip" href="#main">Skip to content</a>
+<header class="site-header">
+  <div class="wrap">
+    <a class="brand" href="/">Kalyani Wasave</a>
+    <button class="menu-btn" id="menu-btn" aria-expanded="false" aria-controls="nav">Menu</button>
+    <nav class="nav" id="nav" aria-label="Main"><a href="/#work">Work</a><a href="/articles/">Articles</a><a href="/glossary.html" aria-current="page">Glossary</a><a href="/builds/">Labs</a><a href="/#experience">Experience</a><a class="btn small" href="/#contact">Get in touch</a></nav>
+  </div>
+</header>
+<main id="main">
+
+<section class="page-head"><div class="wrap">
+  <p class="crumbs"><a href="/">Home</a> / <a href="/glossary.html">Glossary</a></p>
+  <h1>150% BOM</h1>
+  <p class="aka">Also called: Generic BOM, super BOM, maximum BOM, overloaded BOM</p>
+  <p class="entry-def">One bill of materials that holds every part any variant of a product family could need, with a condition on each line that decides when it is used.</p>
+  <div class="related"><span>Related</span><a href="/glossary/configure-to-order.html">Configure to order (CTO)</a><a href="/glossary/constraint.html">Constraint</a><a href="/glossary/product-configurator.html">Product configurator</a><a href="/glossary/effectivity.html">Effectivity</a><a href="/glossary/variant-management.html">Variant management</a></div>
+</div></section>
+<article class="wrap">
+  <div class="prose" style="padding-bottom:16px">
+<p>The name is a joke that stuck. A normal BOM describes one product completely, so it's “100%”. A 150% BOM describes a whole family at once, so it has more parts in it than any single product could ever use. Nobody literally counts to 150. It just means “more than one product's worth.”</p>
+
+<h2>How it works</h2>
+<p>Every line in a 150% BOM carries a condition written against the product's attributes. When a customer configures an order, the conditions are evaluated and only the lines that come out true survive. The survivors are the order's 100% BOM.</p>
+<table>
+  <thead><tr><th>Line</th><th>Part</th><th>Used when</th></tr></thead>
+  <tbody>
+    <tr><td>10</td><td>Mechanical chassis</td><td>Electrified = No</td></tr>
+    <tr><td>11</td><td>Electrified chassis</td><td>Electrified = Fail-safe or Fail-secure</td></tr>
+    <tr><td>40</td><td>Cylinder</td><td>Function is keyed</td></tr>
+    <tr><td>60</td><td>Fire label</td><td>Fire rating = 3-hour</td></tr>
+  </tbody>
+</table>
+<p>The same idea applies to routings: a generic routing holds every operation, and conditions pick the ones this order needs.</p>
+
+<h2>Why manufacturers use it</h2>
+<ul>
+  <li><strong>One structure to maintain.</strong> A family with 8,640 possible variants is one BOM, not 8,640.</li>
+  <li><strong>Changes happen once.</strong> Replace a bracket on line 30 and every variant that uses it is updated, with <a href="/glossary/effectivity.html">Effectivity</a> controlling when.</li>
+  <li><strong>Engineering and sales speak the same language.</strong> The attributes in the conditions are the same ones the dealer picks in <a href="/glossary/cpq.html">CPQ</a>.</li>
+</ul>
+
+<h2>Where it goes wrong</h2>
+<ul>
+  <li><strong>Overlapping conditions.</strong> Two lines that can both be true for the same order put two chassis in one lock. The plant notices before the system does.</li>
+  <li><strong>Gaps.</strong> A combination where no line is true leaves a hole: a lock with no latch. This is why every condition change deserves a test configuration.</li>
+  <li><strong>Conditions that encode business rules.</strong> “Don't sell bronze in Canada” is a sales constraint, not a BOM condition. Mixing the two makes both hard to change.</li>
+</ul>
+</div>
+  <section class="faq"><h2>Questions people ask</h2><details><summary>Is a 150% BOM an engineering BOM or a manufacturing BOM?</summary><p>Usually a manufacturing BOM. Engineering often releases parts and assemblies without the configuration conditions; translating those into a conditional MBOM is a core part of configuration work.</p></details><details><summary>Do I need a configurator to use a 150% BOM?</summary><p>You need something that evaluates the conditions. In practice that's a configurator built into ERP, such as the Infor LN Product Configurator, or a CPQ tool feeding one.</p></details></section>
+  <p class="muted" style="max-width:70ch">Updated November 2026. Think I've got something wrong? <a class="text-link" href="mailto:kalyani.vasave@gmail.com">Tell me</a>.</p>
+  <div class="next-up"><span class="muted">Previous: <a class="text-link" href="/glossary/zombie-variants.html">Zombie variants</a>&emsp;Next: <a class="text-link" href="/glossary/combinatorial-explosion.html">Combinatorial explosion</a></span><a class="btn ghost small" href="/glossary.html">All terms</a></div>
+</article>
+
+</main>
+<footer class="site-footer">
+  <div class="wrap footer-grid">
+    <div class="footer-about">
+      <a class="brand" href="/">Kalyani Wasave</a>
+      <p>Configuration rules, engineering change and product line decisions for products with thousands of variants.</p>
+    </div>
+    <nav class="footer-nav" aria-label="Footer">
+      <a href="/#work">Work</a><a href="/articles/">Articles</a><a href="/glossary.html">Glossary</a><a href="/builds/">Labs</a><a href="/#experience">Experience</a><a href="/#contact">Contact</a>
+    </nav>
+    <div class="footer-social">
+      <span>Find me on</span>
+      <div class="icons"><a href="https://www.linkedin.com/in/kalyani-wasave-09789a76/" aria-label="LinkedIn" rel="noopener"><img src="/assets/img/linkedin-icon.svg" alt=""></a><a href="mailto:kalyani.vasave@gmail.com" aria-label="Email"><img src="/assets/img/email-icon.svg" alt=""></a><a href="https://github.com/kalyanivasave" aria-label="GitHub" rel="noopener"><img src="/assets/img/github-icon.svg" alt=""></a><a href="https://medium.com/@kalyani.vasave" aria-label="Medium" rel="noopener"><img src="/assets/img/medium-icon.svg" alt=""></a></div>
+    </div>
+  </div>
+  <div class="wrap footer-base"><span>© 2026 Kalyani Wasave</span><a href="mailto:kalyani.vasave@gmail.com">kalyani.vasave@gmail.com</a></div>
+</footer>
+<script>
+(function(){var b=document.getElementById('menu-btn'),n=document.getElementById('nav');
+b.addEventListener('click',function(){var o=n.classList.toggle('open');b.setAttribute('aria-expanded',o);});
+n.addEventListener('click',function(e){if(e.target.tagName==='A'){n.classList.remove('open');b.setAttribute('aria-expanded','false');}});})();
+</script>
+</body>
+</html>

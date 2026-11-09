@@ -1,0 +1,119 @@
+/* Configuration Portfolio Cockpit. Styles are scoped to .cockpit so they don't touch the rest of the site. */
+.cockpit{
+  --bg:#F5F3EE; --panel:#FFFFFF; --panel-2:#F5F3EE; --ink:#263431; --ink-2:#66736E; --ink-3:#8C958F;
+  --line:#E3E4DC; --line-2:#ECEAE3; --brand:#255B52; --focus:#255B52;
+  --a-quickship:#0E7C66; --a-keep:#66736E; --a-reprice:#A86400; --a-restrict:#6A4BA3;
+  --a-merge:#2F6F9F; --a-phaseout:#C4561A; --a-retire:#B42318;
+  --ok:#0E7C66; --bad:#B42318; --warn:#A86400;
+  --sans:var(--font-body); --cond:var(--font-head);
+  font-family:var(--sans); font-size:15px; line-height:1.5; color:var(--ink);
+}
+.cockpit *,.cockpit *::before,.cockpit *::after{box-sizing:border-box}
+.cockpit button,.cockpit input,.cockpit select,.cockpit textarea{font:inherit;color:inherit}
+.cockpit .status{margin:0 0 4px;padding:0;border-radius:0;font-weight:500}
+.cockpit .status::before{content:none}
+.cockpit .btn{box-shadow:none;transform:none;min-height:0;line-height:1.3}
+.cockpit .btn:hover{background:var(--brand);border-color:var(--brand);color:#fff}
+.cockpit .btn.ghost:hover{background:var(--panel-2);color:var(--ink);border-color:var(--ink-3)}
+.cockpit table{margin:0}
+.cockpit th{text-transform:none;letter-spacing:0}
+.cockpit h2,.cockpit h3{letter-spacing:-0.01em}
+.cockpit a{color:var(--brand)}
+.cockpit .ck-foot{margin-top:28px;font-size:13px;color:var(--ink-2);max-width:90ch}
+.cockpit :focus-visible{outline:2px solid var(--focus);outline-offset:2px}
+.cockpit .status{font-size:13px;color:var(--ink-2);display:flex;gap:14px;align-items:center;flex-wrap:wrap}
+.cockpit .dot{display:inline-block;width:8px;height:8px;border-radius:50%;background:var(--ink-3);margin-right:6px;vertical-align:middle}
+.cockpit .dot.on{background:var(--ok)}
+.cockpit nav.steps{display:flex;gap:4px;margin:16px 0 22px;overflow-x:auto;padding-bottom:2px}
+.cockpit nav.steps button{flex:0 0 auto;border:1px solid var(--line);background:var(--panel);padding:9px 14px 9px 12px;border-radius:8px;cursor:pointer;display:flex;align-items:center;gap:9px;font-weight:500}
+.cockpit nav.steps button .n{font-family:var(--cond);font-weight:700;font-size:15px;width:22px;height:22px;border-radius:50%;display:grid;place-items:center;background:var(--panel-2);border:1px solid var(--line);color:var(--ink-2)}
+.cockpit nav.steps button[aria-current="page"]{border-color:var(--ink);box-shadow:inset 0 -3px 0 var(--ink)}
+.cockpit nav.steps button[aria-current="page"] .n{background:var(--ink);color:var(--panel);border-color:var(--ink)}
+.cockpit nav.steps .sep{flex:0 0 auto;align-self:center;width:14px;height:1px;background:var(--line)}
+.cockpit .panel{background:var(--panel);border:1px solid var(--line);border-radius:10px;padding:18px 20px}
+.cockpit .grid{display:grid;gap:16px}
+.cockpit .g-hero{grid-template-columns:minmax(0,1.15fr) minmax(0,1fr)}
+.cockpit .g-2{grid-template-columns:minmax(0,1fr) minmax(0,1fr)}
+.cockpit .g-decide{grid-template-columns:290px minmax(0,1fr);align-items:start}
+@media (max-width:900px){.cockpit .g-hero,.cockpit .g-2,.cockpit .g-decide{grid-template-columns:minmax(0,1fr)}}
+.cockpit h2{font-family:var(--cond);font-weight:600;font-size:21px;margin:0 0 4px;line-height:1.15}
+.cockpit h3{font-size:15px;font-weight:600;margin:0 0 8px}
+.cockpit p{margin:0 0 10px;max-width:72ch}
+.cockpit .muted{color:var(--ink-2)}
+.cockpit .small{font-size:13px}
+.cockpit .hero-line{font-family:var(--cond);font-weight:600;font-size:clamp(26px,3.4vw,38px);line-height:1.08;margin:6px 0 14px;max-width:24ch}
+.cockpit .hero-line b{font-weight:700}
+.cockpit .kpis{display:grid;grid-template-columns:repeat(auto-fit,minmax(130px,1fr));gap:0;border:1px solid var(--line);border-radius:10px;background:var(--panel);margin-bottom:16px}
+.cockpit .kpi{padding:12px 16px;border-right:1px solid var(--line-2)}
+.cockpit .kpi:last-child{border-right:0}
+.cockpit .kpi .v{font-family:var(--cond);font-weight:700;font-size:26px;line-height:1.1}
+.cockpit .kpi .l{font-size:12.5px;color:var(--ink-2)}
+.cockpit .shares{display:grid;gap:10px;margin-top:8px}
+.cockpit .share-row{display:grid;grid-template-columns:96px minmax(0,1fr);align-items:center;gap:10px;font-size:13px}
+.cockpit .bar{display:flex;height:26px;border-radius:5px;overflow:hidden;border:1px solid var(--line)}
+.cockpit .bar span{display:flex;align-items:center;justify-content:center;font-size:12px;font-weight:600;color:#fff;min-width:0;white-space:nowrap;overflow:hidden}
+.cockpit .cA{background:#1C4740}
+.cockpit .cB{background:#5E8F82}
+.cockpit .cC{background:#B42318}
+.cockpit .legend{display:flex;gap:14px;flex-wrap:wrap;font-size:12.5px;color:var(--ink-2);margin-top:8px}
+.cockpit .legend i{display:inline-block;width:10px;height:10px;border-radius:2px;margin-right:5px;vertical-align:-1px}
+.cockpit .chart-wrap{overflow-x:auto}
+.cockpit svg text{font-family:var(--sans)}
+.cockpit .alert{border-left:3px solid var(--warn);background:var(--panel-2);padding:10px 12px;border-radius:0 6px 6px 0;font-size:13.5px;margin-bottom:8px}
+.cockpit .alert.bad{border-color:var(--bad)}
+.cockpit .alert b{font-weight:600}
+.cockpit .table-wrap{overflow-x:auto;border:1px solid var(--line);border-radius:10px;background:var(--panel)}
+.cockpit table{border-collapse:collapse;width:100%;font-size:13.5px}
+.cockpit th,.cockpit td{padding:8px 10px;text-align:left;border-bottom:1px solid var(--line-2);white-space:nowrap}
+.cockpit th{font-weight:600;color:var(--ink-2);font-size:12.5px;background:var(--panel-2);position:sticky;top:0}
+.cockpit td.desc{white-space:normal;min-width:170px;max-width:240px;font-size:13px}
+.cockpit td.num,.cockpit th.num{text-align:right;font-variant-numeric:tabular-nums}
+.cockpit tr.row{cursor:pointer}
+.cockpit tr.row:hover td{background:var(--panel-2)}
+.cockpit tr.sel td{background:var(--panel-2)}
+.cockpit .id{font-family:var(--cond);font-weight:700;font-size:15px}
+.cockpit .pill{display:inline-flex;align-items:center;gap:6px;font-size:12.5px;font-weight:600;padding:2px 9px 2px 7px;border-radius:999px;border:1px solid currentColor}
+.cockpit .pill::before{content:"";width:7px;height:7px;border-radius:50%;background:currentColor}
+.cockpit .cls{font-family:var(--cond);font-weight:700;display:inline-block;width:22px;text-align:center;border-radius:4px;color:#fff;font-size:13px}
+.cockpit select.act{border:1px solid var(--line);background:var(--panel);border-radius:6px;padding:3px 6px;font-size:13px}
+.cockpit .ovr{font-size:11.5px;color:var(--ink-3);margin-left:4px}
+.cockpit label.field{display:block;margin-bottom:14px}
+.cockpit label.field .t{display:flex;justify-content:space-between;font-size:13px;font-weight:500;margin-bottom:4px}
+.cockpit label.field .t output{font-family:var(--cond);font-weight:700;font-size:15px}
+.cockpit input[type=range]{width:100%;accent-color:var(--ink)}
+.cockpit .help{font-size:12px;color:var(--ink-3);margin-top:2px}
+.cockpit .impact{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));border:1px solid var(--line);border-radius:10px;overflow:hidden;background:var(--panel);margin-bottom:14px}
+.cockpit .impact > div{padding:12px 14px;border-right:1px solid var(--line-2);border-bottom:1px solid var(--line-2)}
+.cockpit .impact .v{font-family:var(--cond);font-weight:700;font-size:23px;line-height:1.1}
+.cockpit .impact .v.pos{color:var(--ok)}
+.cockpit .impact .v.neg{color:var(--bad)}
+.cockpit .impact .l{font-size:12.5px;color:var(--ink-2)}
+.cockpit .btn{border:1px solid var(--brand);background:var(--brand);color:var(--panel);padding:8px 14px;border-radius:7px;cursor:pointer;font-weight:600;font-size:14px}
+.cockpit .btn.ghost{background:transparent;color:var(--ink);border-color:var(--line)}
+.cockpit .btn:disabled{opacity:.5;cursor:not-allowed}
+.cockpit .btn-row{display:flex;gap:8px;flex-wrap:wrap;align-items:center}
+.cockpit .drawer{border:1px solid var(--line);border-radius:10px;background:var(--panel);padding:16px 18px;margin-top:14px}
+.cockpit .reasons{margin:6px 0 10px;padding-left:18px}
+.cockpit .reasons li{margin-bottom:3px}
+.cockpit .hint{font-size:13.5px;background:var(--panel-2);border:1px dashed var(--line);border-radius:7px;padding:8px 11px;margin-bottom:6px}
+.cockpit .ai-out{white-space:pre-wrap;font-size:14px;line-height:1.55;background:var(--panel-2);border:1px solid var(--line);border-radius:8px;padding:12px 14px;margin-top:10px;max-height:460px;overflow:auto}
+.cockpit .cfg-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(170px,1fr));gap:12px}
+.cockpit .cfg-grid label{font-size:13px;font-weight:500}
+.cockpit .cfg-grid select,.cockpit .cfg-grid input{width:100%;margin-top:4px;border:1px solid var(--line);background:var(--panel);border-radius:6px;padding:7px 8px}
+.cockpit .verdict{display:flex;align-items:center;gap:12px;padding:12px 14px;border-radius:8px;margin:14px 0;font-weight:600}
+.cockpit .verdict.ok{background:color-mix(in srgb,var(--ok) 12%,transparent);color:var(--ok)}
+.cockpit .verdict.bad{background:color-mix(in srgb,var(--bad) 12%,transparent);color:var(--bad)}
+.cockpit .rules{display:grid;gap:8px}
+.cockpit .rule{display:flex;gap:10px;align-items:flex-start;font-size:13.5px;padding:8px 10px;border:1px solid var(--line-2);border-radius:7px}
+.cockpit .rule input{margin-top:3px}
+.cockpit .rule .rid{font-family:var(--cond);font-weight:700;min-width:26px}
+.cockpit .tag{font-size:11.5px;font-weight:600;padding:1px 7px;border-radius:4px;border:1px solid var(--line);color:var(--ink-2)}
+.cockpit .pass{color:var(--ok);font-weight:600}
+.cockpit .fail{color:var(--bad);font-weight:600}
+.cockpit textarea{width:100%;min-height:150px;border:1px solid var(--line);border-radius:8px;padding:10px;background:var(--panel);font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;font-size:12.5px}
+.cockpit input[type=text],.cockpit input[type=date]{border:1px solid var(--line);background:var(--panel);border-radius:6px;padding:6px 8px}
+.cockpit .foot{margin-top:28px;font-size:12.5px;color:var(--ink-3);max-width:90ch}
+.cockpit .sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)}
+.cockpit .toast{position:fixed;left:50%;bottom:calc(20px + env(safe-area-inset-bottom,0px));transform:translateX(-50%);background:var(--ink);color:var(--panel);padding:9px 16px;border-radius:8px;font-size:14px;opacity:0;pointer-events:none;transition:opacity .2s}
+.cockpit .toast.show{opacity:1}
+@media (prefers-reduced-motion:reduce){.cockpit .toast{transition:none}}

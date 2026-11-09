@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Variant management: definition and examples | Kalyani Wasave</title>
+<meta name="description" content="The discipline of deciding which product variants a company offers, how they are defined, and how their cost and complexity are kept under control over their whole life.">
+<meta property="og:title" content="Variant management: definition and examples | Kalyani Wasave">
+<meta property="og:description" content="The discipline of deciding which product variants a company offers, how they are defined, and how their cost and complexity are kept under control over their whole life.">
+<meta property="og:image" content="https://kalyanivasave.github.io/assets/img/rules-lab.png">
+<meta name="theme-color" content="#255B52">
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-K572SWW9');</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/assets/site.css">
+<link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
+</head>
+<body>
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-K572SWW9" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<a class="skip" href="#main">Skip to content</a>
+<header class="site-header">
+  <div class="wrap">
+    <a class="brand" href="/">Kalyani Wasave</a>
+    <button class="menu-btn" id="menu-btn" aria-expanded="false" aria-controls="nav">Menu</button>
+    <nav class="nav" id="nav" aria-label="Main"><a href="/#work">Work</a><a href="/articles/">Articles</a><a href="/glossary.html" aria-current="page">Glossary</a><a href="/builds/">Labs</a><a href="/#experience">Experience</a><a class="btn small" href="/#contact">Get in touch</a></nav>
+  </div>
+</header>
+<main id="main">
+
+<section class="page-head"><div class="wrap">
+  <p class="crumbs"><a href="/">Home</a> / <a href="/glossary.html">Glossary</a></p>
+  <h1>Variant management</h1>
+  <p class="aka">Also called: Variety management, complexity management</p>
+  <p class="entry-def">The discipline of deciding which product variants a company offers, how they are defined, and how their cost and complexity are kept under control over their whole life.</p>
+  <div class="related"><span>Related</span><a href="/glossary/combinatorial-explosion.html">Combinatorial explosion</a><a href="/glossary/sku-rationalization.html">SKU rationalization</a><a href="/glossary/zombie-variants.html">Zombie variants</a><a href="/glossary/modular-architecture.html">Modular product architecture</a><a href="/glossary/product-line-management.html">Product line management</a></div>
+</div></section>
+<article class="wrap">
+  <div class="prose" style="padding-bottom:16px">
+<p>Every manufacturer wants to give customers choice. Every plant would rather build one thing. Variant management is the work of living between those two truths without letting either win completely.</p>
+<p>It is part engineering (how variants are structured), part data (how they are modelled and maintained) and part portfolio decision (which ones deserve to exist at all). Most companies are good at one of the three.</p>
+
+<h2>What it covers</h2>
+<table>
+  <thead><tr><th>Question</th><th>Who usually owns it</th><th>Where it lives</th></tr></thead>
+  <tbody>
+    <tr><td>Which variants do we offer?</td><td>Product line management</td><td>Portfolio, price book</td></tr>
+    <tr><td>How are they built from shared parts?</td><td>Engineering</td><td><a href="/glossary/modular-architecture.html">Modular architecture</a>, BOM</td></tr>
+    <tr><td>How are they described and constrained?</td><td>Configuration</td><td>Rule set, <a href="/glossary/150-percent-bom.html">150% BOM</a></td></tr>
+    <tr><td>When do they change or retire?</td><td>Engineering change, product management</td><td>ECOs, lifecycle states</td></tr>
+  </tbody>
+</table>
+
+<h2>Why it's hard</h2>
+<p>Variety is cheap to add and expensive to keep. Adding a finish takes a meeting. Keeping it costs a price-book column, renders, dealer content, test configurations, stock, and a line on every change impact analysis for the rest of its life. Those costs are spread across so many teams that nobody sees the total, which is how <a href="/glossary/zombie-variants.html">zombie variants</a> survive.</p>
+
+<h2>What good looks like</h2>
+<ul>
+  <li>Variety is offered where customers value it and hidden where they don't. Customers choose a finish; nobody wants to choose a screw.</li>
+  <li>Shared modules absorb the variety, so a new option adds a few parts, not a few hundred.</li>
+  <li>Every variant has a known volume and a known cost to maintain, reviewed on a schedule.</li>
+  <li>Retiring a variant is as normal as launching one.</li>
+</ul>
+</div>
+  <section class="faq"><h2>Questions people ask</h2><details><summary>Is variant management the same as SKU rationalization?</summary><p>SKU rationalization is one activity inside variant management: periodically pruning what you sell. Variant management also covers how variants are designed, modelled and changed.</p></details><details><summary>Who should own it?</summary><p>Ideally someone who can see engineering cost, configuration effort and sales volume at the same time. In practice that is often a product line manager working closely with configuration.</p></details></section>
+  <p class="muted" style="max-width:70ch">Updated November 2026. Think I've got something wrong? <a class="text-link" href="mailto:kalyani.vasave@gmail.com">Tell me</a>.</p>
+  <div class="next-up"><span class="muted">Previous: <a class="text-link" href="/glossary/sku-rationalization.html">SKU rationalization</a>&emsp;Next: <a class="text-link" href="/glossary/zombie-variants.html">Zombie variants</a></span><a class="btn ghost small" href="/glossary.html">All terms</a></div>
+</article>
+
+</main>
+<footer class="site-footer">
+  <div class="wrap footer-grid">
+    <div class="footer-about">
+      <a class="brand" href="/">Kalyani Wasave</a>
+      <p>Configuration rules, engineering change and product line decisions for products with thousands of variants.</p>
+    </div>
+    <nav class="footer-nav" aria-label="Footer">
+      <a href="/#work">Work</a><a href="/articles/">Articles</a><a href="/glossary.html">Glossary</a><a href="/builds/">Labs</a><a href="/#experience">Experience</a><a href="/#contact">Contact</a>
+    </nav>
+    <div class="footer-social">
+      <span>Find me on</span>
+      <div class="icons"><a href="https://www.linkedin.com/in/kalyani-wasave-09789a76/" aria-label="LinkedIn" rel="noopener"><img src="/assets/img/linkedin-icon.svg" alt=""></a><a href="mailto:kalyani.vasave@gmail.com" aria-label="Email"><img src="/assets/img/email-icon.svg" alt=""></a><a href="https://github.com/kalyanivasave" aria-label="GitHub" rel="noopener"><img src="/assets/img/github-icon.svg" alt=""></a><a href="https://medium.com/@kalyani.vasave" aria-label="Medium" rel="noopener"><img src="/assets/img/medium-icon.svg" alt=""></a></div>
+    </div>
+  </div>
+  <div class="wrap footer-base"><span>© 2026 Kalyani Wasave</span><a href="mailto:kalyani.vasave@gmail.com">kalyani.vasave@gmail.com</a></div>
+</footer>
+<script>
+(function(){var b=document.getElementById('menu-btn'),n=document.getElementById('nav');
+b.addEventListener('click',function(){var o=n.classList.toggle('open');b.setAttribute('aria-expanded',o);});
+n.addEventListener('click',function(e){if(e.target.tagName==='A'){n.classList.remove('open');b.setAttribute('aria-expanded','false');}});})();
+</script>
+</body>
+</html>

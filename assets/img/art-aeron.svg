@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 400" role="img" aria-label="A tree of options multiplying from one chair into over a million configurations">
+  <rect width="640" height="400" fill="#F5F3EE"/>
+  <g stroke="#66736E" stroke-width="2" fill="none" opacity="0.55">
+    <path d="M120 200C170 200 170 110 220 110M120 200H220M120 200C170 200 170 290 220 290"/>
+    <path d="M240 110C270 110 270 70 300 70M240 110H300M240 110C270 110 270 150 300 150M240 200C270 200 270 175 300 175M240 200H300M240 200C270 200 270 225 300 225M240 290C270 290 270 250 300 250M240 290H300M240 290C270 290 270 330 300 330"/>
+  </g>
+  <g fill="#66736E" opacity="0.35">
+    <g id="fan"><circle cx="330" cy="0" r="3"/><circle cx="350" cy="-6" r="3"/><circle cx="350" cy="6" r="3"/><circle cx="370" cy="-12" r="2.5"/><circle cx="370" cy="0" r="2.5"/><circle cx="370" cy="12" r="2.5"/><circle cx="390" cy="-16" r="2"/><circle cx="390" cy="-5" r="2"/><circle cx="390" cy="5" r="2"/><circle cx="390" cy="16" r="2"/></g>
+    <use href="#fan" y="70"/><use href="#fan" y="110"/><use href="#fan" y="150"/><use href="#fan" y="175"/><use href="#fan" y="200"/><use href="#fan" y="225"/><use href="#fan" y="250"/><use href="#fan" y="290"/><use href="#fan" y="330"/>
+  </g>
+  <g transform="translate(70 200)">
+    <circle r="48" fill="#263431"/>
+    <path d="M-16-22h32v16h-32zM-18-4h36l-4 10h-28zM0 6v12M-14 22h28" fill="none" stroke="#B9D3CB" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+  </g>
+  <g font-family="Space Grotesk, Arial, sans-serif" fill="#263431">
+    <text x="232" y="96" font-size="15" font-weight="600" text-anchor="middle">size</text>
+    <text x="290" y="50" font-size="15" font-weight="600" text-anchor="middle">tilt</text>
+    <text x="410" y="28" font-size="15" font-weight="600" text-anchor="middle">arms, base, casters…</text>
+    <text x="520" y="190" font-size="54" font-weight="700" text-anchor="middle">1.2M+</text>
+    <text x="520" y="222" font-size="17" font-weight="500" text-anchor="middle" fill="#66736E">possible configurations</text>
+  </g>
+  <rect x="420" y="250" width="200" height="40" rx="20" fill="#255B52"/>
+  <text x="520" y="276" font-family="Inter, Arial, sans-serif" font-size="14" font-weight="600" fill="#F5F3EE" text-anchor="middle">built from shared parts</text>
+</svg>

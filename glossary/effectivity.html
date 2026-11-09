@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Effectivity: definition and examples | Kalyani Wasave</title>
+<meta name="description" content="The rule that says from when, or from which unit, a change applies, so old and new versions can coexist without breaking orders in flight.">
+<meta property="og:title" content="Effectivity: definition and examples | Kalyani Wasave">
+<meta property="og:description" content="The rule that says from when, or from which unit, a change applies, so old and new versions can coexist without breaking orders in flight.">
+<meta property="og:image" content="https://kalyanivasave.github.io/assets/img/rules-lab.png">
+<meta name="theme-color" content="#255B52">
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-K572SWW9');</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/assets/site.css">
+<link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
+</head>
+<body>
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-K572SWW9" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<a class="skip" href="#main">Skip to content</a>
+<header class="site-header">
+  <div class="wrap">
+    <a class="brand" href="/">Kalyani Wasave</a>
+    <button class="menu-btn" id="menu-btn" aria-expanded="false" aria-controls="nav">Menu</button>
+    <nav class="nav" id="nav" aria-label="Main"><a href="/#work">Work</a><a href="/articles/">Articles</a><a href="/glossary.html" aria-current="page">Glossary</a><a href="/builds/">Labs</a><a href="/#experience">Experience</a><a class="btn small" href="/#contact">Get in touch</a></nav>
+  </div>
+</header>
+<main id="main">
+
+<section class="page-head"><div class="wrap">
+  <p class="crumbs"><a href="/">Home</a> / <a href="/glossary.html">Glossary</a></p>
+  <h1>Effectivity</h1>
+  <p class="aka">Also called: Date effectivity, serial effectivity, cut-in</p>
+  <p class="entry-def">The rule that says from when, or from which unit, a change applies, so old and new versions can coexist without breaking orders in flight.</p>
+  <div class="related"><span>Related</span><a href="/glossary/engineering-change.html">Engineering change (ECR, ECO, ECN)</a><a href="/glossary/150-percent-bom.html">150% BOM</a><a href="/glossary/sku-rationalization.html">SKU rationalization</a></div>
+</div></section>
+<article class="wrap">
+  <div class="prose" style="padding-bottom:16px">
+<p>Effectivity answers the most practical question in engineering change: which orders get the new version? Without it, every change would apply to everything at once, including the 300 orders already being built.</p>
+
+<h2>Kinds of effectivity</h2>
+<table>
+  <thead><tr><th>Type</th><th>Applies from</th><th>Common use</th></tr></thead>
+  <tbody>
+    <tr><td>Date</td><td>An order or build date</td><td>Configure-to-order products, price and option changes</td></tr>
+    <tr><td>Serial</td><td>A unit serial number</td><td>Machinery, vehicles, anything serviced by serial</td></tr>
+    <tr><td>Lot</td><td>A production batch</td><td>Process and material changes</td></tr>
+  </tbody>
+</table>
+
+<h2>Choosing the date</h2>
+<p>The right cut-in date is a negotiation between engineering (as soon as possible), purchasing (when the old stock runs out), the plant (not in the middle of a big run) and sales (not the week before a major project ships). Picking it well is half the change.</p>
+
+<h2>Effectivity in a configurator</h2>
+<p>In a configurator, effectivity usually lives on BOM lines and rules. The same configuration ordered on 30 November and on 1 December can legitimately produce different BOMs. The <a href="/builds/rules-lab.html">Rules Lab</a> shows this: the return lever switches from rev A to rev B on 1 December 2026, and a finish becomes unorderable on 1 January 2027, without anyone editing an order.</p>
+</div>
+  <section class="faq"><h2>Questions people ask</h2><details><summary>What happens to orders placed before the cut-in?</summary><p>They keep the old version, unless the change is urgent enough (a safety issue, for example) to justify reworking them.</p></details><details><summary>Can effectivity be used to retire options?</summary><p>Yes. An end date on an option is the cleanest way to phase it out while protecting open quotes.</p></details></section>
+  <p class="muted" style="max-width:70ch">Updated November 2026. Think I've got something wrong? <a class="text-link" href="mailto:kalyani.vasave@gmail.com">Tell me</a>.</p>
+  <div class="next-up"><span class="muted">Previous: <a class="text-link" href="/glossary/cpq.html">CPQ</a>&emsp;Next: <a class="text-link" href="/glossary/engineering-change.html">Engineering change (ECR, ECO, ECN)</a></span><a class="btn ghost small" href="/glossary.html">All terms</a></div>
+</article>
+
+</main>
+<footer class="site-footer">
+  <div class="wrap footer-grid">
+    <div class="footer-about">
+      <a class="brand" href="/">Kalyani Wasave</a>
+      <p>Configuration rules, engineering change and product line decisions for products with thousands of variants.</p>
+    </div>
+    <nav class="footer-nav" aria-label="Footer">
+      <a href="/#work">Work</a><a href="/articles/">Articles</a><a href="/glossary.html">Glossary</a><a href="/builds/">Labs</a><a href="/#experience">Experience</a><a href="/#contact">Contact</a>
+    </nav>
+    <div class="footer-social">
+      <span>Find me on</span>
+      <div class="icons"><a href="https://www.linkedin.com/in/kalyani-wasave-09789a76/" aria-label="LinkedIn" rel="noopener"><img src="/assets/img/linkedin-icon.svg" alt=""></a><a href="mailto:kalyani.vasave@gmail.com" aria-label="Email"><img src="/assets/img/email-icon.svg" alt=""></a><a href="https://github.com/kalyanivasave" aria-label="GitHub" rel="noopener"><img src="/assets/img/github-icon.svg" alt=""></a><a href="https://medium.com/@kalyani.vasave" aria-label="Medium" rel="noopener"><img src="/assets/img/medium-icon.svg" alt=""></a></div>
+    </div>
+  </div>
+  <div class="wrap footer-base"><span>© 2026 Kalyani Wasave</span><a href="mailto:kalyani.vasave@gmail.com">kalyani.vasave@gmail.com</a></div>
+</footer>
+<script>
+(function(){var b=document.getElementById('menu-btn'),n=document.getElementById('nav');
+b.addEventListener('click',function(){var o=n.classList.toggle('open');b.setAttribute('aria-expanded',o);});
+n.addEventListener('click',function(e){if(e.target.tagName==='A'){n.classList.remove('open');b.setAttribute('aria-expanded','false');}});})();
+</script>
+</body>
+</html>

@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Variant Portfolio Lab | Kalyani Wasave</title>
+<meta name="description" content="Keep, retire or reprice options on a fictional task chair with 1,166,400 possible combinations, and see the impact on volume, cost and the variant space.">
+<meta property="og:title" content="Variant Portfolio Lab | Kalyani Wasave">
+<meta property="og:description" content="Keep, retire or reprice options on a fictional task chair with 1,166,400 possible combinations, and see the impact on volume, cost and the variant space.">
+<meta property="og:image" content="https://kalyanivasave.github.io/assets/img/rules-lab.png">
+<meta name="theme-color" content="#255B52">
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-K572SWW9');</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/assets/site.css">
+<link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
+</head>
+<body>
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-K572SWW9" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<a class="skip" href="#main">Skip to content</a>
+<header class="site-header">
+  <div class="wrap">
+    <a class="brand" href="/">Kalyani Wasave</a>
+    <button class="menu-btn" id="menu-btn" aria-expanded="false" aria-controls="nav">Menu</button>
+    <nav class="nav" id="nav" aria-label="Main"><a href="/#work">Work</a><a href="/articles/">Articles</a><a href="/glossary.html">Glossary</a><a href="/builds/" aria-current="page">Labs</a><a href="/#experience">Experience</a><a class="btn small" href="/#contact">Get in touch</a></nav>
+  </div>
+</header>
+<main id="main">
+
+<section class="page-head"><div class="wrap">
+  <p class="crumbs"><a href="/">Home</a> / <a href="/builds/">Labs</a></p>
+  <h1>Variant Portfolio Lab</h1>
+  <p class="lede">A fictional task chair with 11 attributes and 1,166,400 possible combinations, the same order of complexity as the Herman Miller Aeron, which <a class="text-link" href="https://www.infor.com/en-gb/resources/herman-miller-configures-furniture-with-infor" rel="noopener">Infor puts at more than 1.2 million</a>. Decide which options to keep, retire or reprice, and watch what each choice does to volume, cost and the variant space.</p>
+  <p class="muted">Every option, volume, price and cost here is invented. The decisions are the kind I worked on at Herman Miller: which options stay orderable, which retire and how pricing changes, seen from the configuration side, where each option's real running cost shows up. Background: <a class="text-link" href="/glossary/sku-rationalization.html">SKU rationalization</a>, <a class="text-link" href="/glossary/zombie-variants.html">zombie variants</a>, <a class="text-link" href="/glossary/combinatorial-explosion.html">combinatorial explosion</a>.</p>
+</div></section>
+<div class="wrap">
+  <div class="tabs" role="tablist" aria-label="Lab views" style="margin-top:32px">
+    <button role="tab" id="t-dec" aria-controls="p-dec" aria-selected="true">Portfolio decisions</button>
+    <button role="tab" id="t-space" aria-controls="p-space" aria-selected="false" tabindex="-1">Variant space</button>
+    <button role="tab" id="t-cfg" aria-controls="p-cfg" aria-selected="false" tabindex="-1">Configure a chair</button>
+    <button role="tab" id="t-how" aria-controls="p-how" aria-selected="false" tabindex="-1">How the model works</button>
+  </div>
+
+  <div class="tabpanel" role="tabpanel" id="p-dec" aria-labelledby="t-dec">
+    <div class="controls">
+      <div><button type="button" class="btn small" id="pl-suggest">Apply my suggested plan</button> <button type="button" class="btn ghost small" id="pl-reset">Reset to today</button></div>
+      <div class="field"><label for="pl-subst">Buyers who accept the nearest alternative: <span id="pl-subst-out"></span></label><input type="range" id="pl-subst" min="50" max="100" value="90"></div>
+      <div class="field"><label for="pl-elast">Price sensitivity of option buyers: <span id="pl-elast-out"></span></label><input type="range" id="pl-elast" min="0" max="20" value="6"></div>
+    </div>
+    <div class="kpis" id="pl-kpis" aria-live="polite"></div>
+    <table>
+      <thead><tr><th>Option</th><th>Share of chairs</th><th class="num">Chairs a year</th><th class="num">Price adder</th><th class="num">Cost to keep a year</th><th>Decision</th><th>Why</th></tr></thead>
+      <tbody id="pl-rows"></tbody>
+    </table>
+  </div>
+
+  <div class="tabpanel" role="tabpanel" id="p-space" aria-labelledby="t-space" hidden>
+    <div class="space-figs" id="pl-space-figs"></div>
+    <p class="muted" id="pl-tail-note"></p>
+    <div class="chart-wrap" id="pl-chart"></div>
+  </div>
+
+  <div class="tabpanel" role="tabpanel" id="p-cfg" aria-labelledby="t-cfg" hidden>
+    <div class="lab-grid" style="margin-top:0">
+      <section class="lab-panel" aria-labelledby="pl-cfg-h"><h2 id="pl-cfg-h">Configure</h2><form id="pl-form" onsubmit="return false"></form></section>
+      <section class="lab-panel dark" aria-labelledby="pl-res-h">
+        <h2 id="pl-res-h">This chair</h2>
+        <p class="count" style="margin:4px 0 0">Configuration code</p>
+        <p class="config-code" id="pl-code"></p>
+        <p class="notice" id="pl-notice" role="status" aria-live="polite"></p>
+        <h3>Price</h3>
+        <table><tbody id="pl-price"></tbody></table>
+        <h3>How common is it?</h3>
+        <p class="count" id="pl-rarity" style="margin:0"></p>
+      </section>
+    </div>
+  </div>
+
+  <div class="tabpanel" role="tabpanel" id="p-how" aria-labelledby="t-how" hidden><div class="prose">
+    <h3 style="margin-top:0">The chair</h3>
+    <p>Model K has 11 attributes with 45 values between them. Multiplied out, that is 1,166,400 combinations. Five constraints remove the ones that can't be built, leaving 442,260 valid configurations. Nobody builds them all; each chair is assembled to order from shared parts.</p>
+    <h3>What each option is worth, and what it costs</h3>
+    <p>Every chair earns a base contribution. Options with a price adder earn extra contribution on top. Against that, every option offered has a yearly cost to keep: its column in every price book, its configuration rules and test configurations, its swatches and renders in dealer tools, minimum order quantities and slow stock. Low-volume colours and casters carry the highest cost to keep, because those costs don't shrink with volume.</p>
+    <h3>Retire</h3>
+    <p>A retired option's buyers either accept the nearest alternative, the most popular choice in that attribute, or walk away. The substitution slider sets how many accept. Retiring saves the option's cost to keep and shrinks the variant space.</p>
+    <h3>Reprice</h3>
+    <p>Raising an option's adder earns more on every chair that keeps it, and sends some buyers to the next most popular choice. The price sensitivity slider sets how many.</p>
+    <h3>The judgment call</h3>
+    <p>Apply the suggested plan, then drag substitution down to 70%. The same plan that adds money at 90% barely breaks even, because more buyers walk away. Every real rationalization turns on that question: will customers accept the nearest alternative? Order history, dealer conversations and strategic accounts answer it, not the spreadsheet. That's why two low-volume options in the plan are kept on purpose.</p>
+  </div></div>
+</div>
+
+</main>
+<footer class="site-footer">
+  <div class="wrap footer-grid">
+    <div class="footer-about">
+      <a class="brand" href="/">Kalyani Wasave</a>
+      <p>Configuration rules, engineering change and product line decisions for products with thousands of variants.</p>
+    </div>
+    <nav class="footer-nav" aria-label="Footer">
+      <a href="/#work">Work</a><a href="/articles/">Articles</a><a href="/glossary.html">Glossary</a><a href="/builds/">Labs</a><a href="/#experience">Experience</a><a href="/#contact">Contact</a>
+    </nav>
+    <div class="footer-social">
+      <span>Find me on</span>
+      <div class="icons"><a href="https://www.linkedin.com/in/kalyani-wasave-09789a76/" aria-label="LinkedIn" rel="noopener"><img src="/assets/img/linkedin-icon.svg" alt=""></a><a href="mailto:kalyani.vasave@gmail.com" aria-label="Email"><img src="/assets/img/email-icon.svg" alt=""></a><a href="https://github.com/kalyanivasave" aria-label="GitHub" rel="noopener"><img src="/assets/img/github-icon.svg" alt=""></a><a href="https://medium.com/@kalyani.vasave" aria-label="Medium" rel="noopener"><img src="/assets/img/medium-icon.svg" alt=""></a></div>
+    </div>
+  </div>
+  <div class="wrap footer-base"><span>© 2026 Kalyani Wasave</span><a href="mailto:kalyani.vasave@gmail.com">kalyani.vasave@gmail.com</a></div>
+</footer>
+<script>
+(function(){var b=document.getElementById('menu-btn'),n=document.getElementById('nav');
+b.addEventListener('click',function(){var o=n.classList.toggle('open');b.setAttribute('aria-expanded',o);});
+n.addEventListener('click',function(e){if(e.target.tagName==='A'){n.classList.remove('open');b.setAttribute('aria-expanded','false');}});})();
+</script>
+<script src="/builds/portfolio-lab.js"></script>
+</body>
+</html>

@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 400" role="img" aria-label="Four door swings, LH, RH, LHR and RHR, with the left-hand reverse door marked late">
+  <rect width="640" height="400" fill="#F5F3EE"/>
+  <g font-family="Space Grotesk, Arial, sans-serif" font-weight="700" font-size="22" text-anchor="middle" fill="#263431">
+    <g transform="translate(95 170)"><rect x="-60" y="-60" width="120" height="8" fill="#263431"/><path d="M-60-52v90" stroke="#263431" stroke-width="6"/><path d="M-60 38A90 90 0 0 0 30-52" fill="none" stroke="#66736E" stroke-width="2" stroke-dasharray="5 6"/><circle cx="-50" cy="38" r="6" fill="#9AA19A"/><text y="100">LH</text></g>
+    <g transform="translate(245 170)"><rect x="-60" y="-60" width="120" height="8" fill="#263431"/><path d="M60-52v90" stroke="#263431" stroke-width="6"/><path d="M60 38A90 90 0 0 1 -30-52" fill="none" stroke="#66736E" stroke-width="2" stroke-dasharray="5 6"/><circle cx="50" cy="38" r="6" fill="#9AA19A"/><text y="100">RH</text></g>
+    <g transform="translate(395 170)"><rect x="-64" y="-72" width="128" height="164" rx="14" fill="#FBE9E7"/><rect x="-60" y="-60" width="120" height="8" fill="#263431"/><path d="M-60-52v90" stroke="#B42318" stroke-width="6"/><path d="M-60-52A90 90 0 0 1 30 38" fill="none" stroke="#B42318" stroke-width="2" stroke-dasharray="5 6"/><circle cx="-50" cy="38" r="6" fill="#B42318"/><text y="100" fill="#B42318">LHR</text></g>
+    <g transform="translate(545 170)"><rect x="-60" y="-60" width="120" height="8" fill="#263431"/><path d="M60-52v90" stroke="#263431" stroke-width="6"/><path d="M60-52A90 90 0 0 0 -30 38" fill="none" stroke="#66736E" stroke-width="2" stroke-dasharray="5 6"/><circle cx="50" cy="38" r="6" fill="#9AA19A"/><text y="100">RHR</text></g>
+  </g>
+  <rect x="335" y="300" width="120" height="36" rx="18" fill="#B42318"/>
+  <text x="395" y="324" font-family="Inter, Arial, sans-serif" font-size="15" font-weight="600" fill="#F5F3EE" text-anchor="middle">always late</text>
+  <text x="320" y="64" font-family="Space Grotesk, Arial, sans-serif" font-size="20" font-weight="700" fill="#263431" text-anchor="middle">Same lock. Four handings. One suspect.</text>
+</svg>

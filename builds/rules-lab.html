@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Configure-to-Order Rules Lab | Kalyani Wasave</title>
+<meta name="description" content="A working product configurator for a fictional commercial door lock: constraint rules, a 150% BOM that resolves live, pricing, routing, effectivity and a test suite.">
+<meta property="og:title" content="Configure-to-Order Rules Lab | Kalyani Wasave">
+<meta property="og:description" content="A working product configurator for a fictional commercial door lock: constraint rules, a 150% BOM that resolves live, pricing, routing, effectivity and a test suite.">
+<meta property="og:image" content="https://kalyanivasave.github.io/assets/img/rules-lab.png">
+<meta name="theme-color" content="#255B52">
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-K572SWW9');</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/assets/site.css">
+<link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
+</head>
+<body>
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-K572SWW9" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<a class="skip" href="#main">Skip to content</a>
+<header class="site-header">
+  <div class="wrap">
+    <a class="brand" href="/">Kalyani Wasave</a>
+    <button class="menu-btn" id="menu-btn" aria-expanded="false" aria-controls="nav">Menu</button>
+    <nav class="nav" id="nav" aria-label="Main"><a href="/#work">Work</a><a href="/articles/">Articles</a><a href="/glossary.html">Glossary</a><a href="/builds/" aria-current="page">Labs</a><a href="/#experience">Experience</a><a class="btn small" href="/#contact">Get in touch</a></nav>
+  </div>
+</header>
+<main id="main">
+
+<section class="page-head"><div class="wrap">
+  <p class="crumbs"><a href="/">Home</a> / <a href="/builds/">Labs</a></p>
+  <h1>Configure-to-Order Rules Lab</h1>
+  <p class="lede">A working configurator for a fictional commercial mortise lock. Change an option and watch the constraints repair the configuration, the 150% BOM resolve to the order BOM, and the routing and dealer net price follow. Move the order date to see a revision cut in and a finish phase out.</p>
+  <p class="muted">The product, part numbers and prices are invented. The modelling approach is the one configure-to-order manufacturers actually use: describe what can't be built, not every combination that can. Background in the glossary: <a class="text-link" href="/glossary/150-percent-bom.html">150% BOM</a>, <a class="text-link" href="/glossary/constraint.html">constraint</a>, <a class="text-link" href="/glossary/effectivity.html">effectivity</a>.</p>
+</div></section>
+<div class="wrap">
+<div class="lab-grid">
+    <section class="lab-panel" aria-labelledby="cfg-h">
+      <h2 id="cfg-h">Configure</h2>
+      <form id="lab-form" onsubmit="return false"></form>
+      <button type="button" class="btn ghost small" id="lab-reset">Reset to default</button>
+    </section>
+    <section class="lab-panel dark" aria-labelledby="res-h">
+      <h2 id="res-h">This configuration</h2>
+      <p><span class="status ok" id="lab-status" role="status" aria-live="polite">Valid and buildable</span></p>
+      <p class="count" style="margin:14px 0 0">Configuration code</p>
+      <p class="config-code" id="lab-code"></p>
+      <p class="notice" id="lab-notice" role="status" aria-live="polite"></p>
+      <h3>Bill of materials</h3>
+      <p class="count" id="bom-count"></p>
+      <table><thead><tr><th>Line</th><th>Part number</th><th>Description</th><th class="num">Qty</th></tr></thead><tbody id="bom-body"></tbody></table>
+      <h3>Price</h3>
+      <table><tbody id="price-body"></tbody></table>
+      <h3>Routing</h3>
+      <table><thead><tr><th class="num">Op</th><th>Operation</th><th class="num">Minutes</th></tr></thead><tbody id="routing-body"></tbody></table>
+    </section>
+  </div>
+
+  
+<div class="tabs" role="tablist" aria-label="Model details">
+    <button role="tab" id="t-rules" aria-controls="p-rules" aria-selected="true">Rules</button>
+    <button role="tab" id="t-generic" aria-controls="p-generic" aria-selected="false" tabindex="-1">Generic (150%) BOM</button>
+    <button role="tab" id="t-tests" aria-controls="p-tests" aria-selected="false" tabindex="-1">Test suite</button>
+    <button role="tab" id="t-how" aria-controls="p-how" aria-selected="false" tabindex="-1">How it works</button>
+  </div>
+  <div class="tabpanel" role="tabpanel" id="p-rules" aria-labelledby="t-rules">
+    <p class="muted">Every constraint in the model, and whether the current configuration satisfies it.</p>
+    <table><thead><tr><th>Rule</th><th>What it says</th><th>Attributes</th><th>Now</th></tr></thead><tbody id="rules-body"></tbody></table>
+  </div>
+  <div class="tabpanel" role="tabpanel" id="p-generic" aria-labelledby="t-generic" hidden>
+    <p class="muted">The one list that holds every part any configuration could need. Each line has a condition; configuring filters it down to this order's BOM.</p>
+    <table><thead><tr><th>Line</th><th>Description</th><th>Used when</th><th>This order</th></tr></thead><tbody id="generic-body"></tbody></table>
+  </div>
+  <div class="tabpanel" role="tabpanel" id="p-tests" aria-labelledby="t-tests" hidden>
+    <p class="muted">Saved configurations with known correct outcomes. In real work this suite runs before every rule release, so a fix never quietly breaks something else.</p>
+    <p><button type="button" class="btn small" id="run-tests">Run all tests</button> <span id="test-summary" class="muted" role="status" aria-live="polite" style="margin-left:12px"></span></p>
+    <table><thead><tr><th class="num">#</th><th>Test</th><th>Configuration</th><th>Result</th><th>Detail</th></tr></thead><tbody id="tests-body"></tbody></table>
+  </div>
+  <div class="tabpanel" role="tabpanel" id="p-how" aria-labelledby="t-how" hidden><div class="prose">
+    <h3 style="margin-top:0">The model</h3>
+    <p>The lock is described by eight <a class="term" href="/glossary.html#attribute-and-option">attributes</a> and their options, plus an order date. Eight <a class="term" href="/glossary/constraint.html">constraints</a> say which combinations are not allowed. Instead of listing every valid lock, the model lists what can't be built, which is how most configure-to-order products are modelled.</p>
+    <h3>Blocking and repairing</h3>
+    <p>Before you pick an option, the lab checks whether it would break a rule with your other choices and disables it, naming the rule. When you change something that makes an earlier choice invalid, the lab repairs that choice and tells you why, the way a good configurator guides a dealer rather than failing at checkout.</p>
+    <h3>From generic BOM to order BOM</h3>
+    <p>Every part lives in one <a class="term" href="/glossary/150-percent-bom.html">150% BOM</a>, each line with a condition. The configuration filters it to a <a class="term" href="/glossary.html#100-bom">100% BOM</a>. The same choices select the <a class="term" href="/glossary.html#routing">routing</a> operations and build up the list price, with a dealer multiplier for the net price.</p>
+    <h3>Effectivity</h3>
+    <p>Two dated rules show <a class="term" href="/glossary/effectivity.html">effectivity</a>. The return lever moves from rev A to rev B on 1 December 2026 without anyone editing the BOM, and oil-rubbed bronze is <a class="term" href="/glossary.html#end-of-life">phased out</a> for orders dated on or after 1 January 2027.</p>
+    <h3>Testing</h3>
+    <p>Eighteen <a class="term" href="/glossary.html#test-configuration">test configurations</a> check that every rule fires when it should, that valid locks get the right parts, and that the price builds up correctly. The code is plain JavaScript; you can read it in <a href="/builds/rules-lab.js">rules-lab.js</a>.</p>
+  </div></div>
+</div>
+
+</main>
+<footer class="site-footer">
+  <div class="wrap footer-grid">
+    <div class="footer-about">
+      <a class="brand" href="/">Kalyani Wasave</a>
+      <p>Configuration rules, engineering change and product line decisions for products with thousands of variants.</p>
+    </div>
+    <nav class="footer-nav" aria-label="Footer">
+      <a href="/#work">Work</a><a href="/articles/">Articles</a><a href="/glossary.html">Glossary</a><a href="/builds/">Labs</a><a href="/#experience">Experience</a><a href="/#contact">Contact</a>
+    </nav>
+    <div class="footer-social">
+      <span>Find me on</span>
+      <div class="icons"><a href="https://www.linkedin.com/in/kalyani-wasave-09789a76/" aria-label="LinkedIn" rel="noopener"><img src="/assets/img/linkedin-icon.svg" alt=""></a><a href="mailto:kalyani.vasave@gmail.com" aria-label="Email"><img src="/assets/img/email-icon.svg" alt=""></a><a href="https://github.com/kalyanivasave" aria-label="GitHub" rel="noopener"><img src="/assets/img/github-icon.svg" alt=""></a><a href="https://medium.com/@kalyani.vasave" aria-label="Medium" rel="noopener"><img src="/assets/img/medium-icon.svg" alt=""></a></div>
+    </div>
+  </div>
+  <div class="wrap footer-base"><span>© 2026 Kalyani Wasave</span><a href="mailto:kalyani.vasave@gmail.com">kalyani.vasave@gmail.com</a></div>
+</footer>
+<script>
+(function(){var b=document.getElementById('menu-btn'),n=document.getElementById('nav');
+b.addEventListener('click',function(){var o=n.classList.toggle('open');b.setAttribute('aria-expanded',o);});
+n.addEventListener('click',function(e){if(e.target.tagName==='A'){n.classList.remove('open');b.setAttribute('aria-expanded','false');}});})();
+</script>
+<script src="/builds/rules-lab.js"></script>
+<script src="/builds/rules-lab-ui.js"></script>
+</body>
+</html>

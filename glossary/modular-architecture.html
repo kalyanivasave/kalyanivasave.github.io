@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Modular product architecture: definition and examples | Kalyani Wasave</title>
+<meta name="description" content="Designing a product family from a limited set of shared modules with standard interfaces, so variety comes from combining modules rather than from new parts.">
+<meta property="og:title" content="Modular product architecture: definition and examples | Kalyani Wasave">
+<meta property="og:description" content="Designing a product family from a limited set of shared modules with standard interfaces, so variety comes from combining modules rather than from new parts.">
+<meta property="og:image" content="https://kalyanivasave.github.io/assets/img/rules-lab.png">
+<meta name="theme-color" content="#255B52">
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-K572SWW9');</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/assets/site.css">
+<link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
+</head>
+<body>
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-K572SWW9" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<a class="skip" href="#main">Skip to content</a>
+<header class="site-header">
+  <div class="wrap">
+    <a class="brand" href="/">Kalyani Wasave</a>
+    <button class="menu-btn" id="menu-btn" aria-expanded="false" aria-controls="nav">Menu</button>
+    <nav class="nav" id="nav" aria-label="Main"><a href="/#work">Work</a><a href="/articles/">Articles</a><a href="/glossary.html" aria-current="page">Glossary</a><a href="/builds/">Labs</a><a href="/#experience">Experience</a><a class="btn small" href="/#contact">Get in touch</a></nav>
+  </div>
+</header>
+<main id="main">
+
+<section class="page-head"><div class="wrap">
+  <p class="crumbs"><a href="/">Home</a> / <a href="/glossary.html">Glossary</a></p>
+  <h1>Modular product architecture</h1>
+  <p class="aka">Also called: Modularisation, platform design</p>
+  <p class="entry-def">Designing a product family from a limited set of shared modules with standard interfaces, so variety comes from combining modules rather than from new parts.</p>
+  <div class="related"><span>Related</span><a href="/glossary/variant-management.html">Variant management</a><a href="/glossary/combinatorial-explosion.html">Combinatorial explosion</a><a href="/glossary/configure-to-order.html">Configure to order (CTO)</a><a href="/glossary/150-percent-bom.html">150% BOM</a></div>
+</div></section>
+<article class="wrap">
+  <div class="prose" style="padding-bottom:16px">
+<p>Modularity is how a product family can offer thousands of variants from a few hundred parts. The variety lives in the combinations, not in the components.</p>
+
+<h2>How it works</h2>
+<p>The product is split into modules (a base, a seat, arms, a back), each with a few variants and a standard interface to its neighbours. As long as every arm fits every seat through the same interface, adding a new arm adds one module, not one new chair per existing combination.</p>
+<table>
+  <thead><tr><th></th><th>Integral design</th><th>Modular design</th></tr></thead>
+  <tbody>
+    <tr><td>New option means</td><td>New parts across the product</td><td>One new module</td></tr>
+    <tr><td>Parts count as variety grows</td><td>Grows with variants</td><td>Grows with modules</td></tr>
+    <tr><td>Configuration rules</td><td>Many, specific</td><td>Few, at interfaces</td></tr>
+  </tbody>
+</table>
+
+<h2>What it means for configuration</h2>
+<p>Good modularity makes the configurator's job easier: constraints concentrate at the interfaces, and the <a href="/glossary/150-percent-bom.html">150% BOM</a> becomes a tidy set of module choices. Poor modularity shows up as rules that read like exceptions: this arm with that seat only in these finishes. When a rule set is full of exceptions, the architecture is usually the cause.</p>
+</div>
+  <section class="faq"><h2>Questions people ask</h2><details><summary>Is modular always better?</summary><p>No. Modularity costs some performance, weight or aesthetics at the interfaces. Premium products sometimes trade modularity away on purpose.</p></details><details><summary>Who decides the module boundaries?</summary><p>Engineering and product management together. Configuration should be in the room, because the boundaries decide how many rules will be needed for the next ten years.</p></details></section>
+  <p class="muted" style="max-width:70ch">Updated November 2026. Think I've got something wrong? <a class="text-link" href="mailto:kalyani.vasave@gmail.com">Tell me</a>.</p>
+  <div class="next-up"><span class="muted">Previous: <a class="text-link" href="/glossary/engineering-change.html">Engineering change (ECR, ECO, ECN)</a>&emsp;Next: <a class="text-link" href="/glossary/order-fallout.html">Order fallout</a></span><a class="btn ghost small" href="/glossary.html">All terms</a></div>
+</article>
+
+</main>
+<footer class="site-footer">
+  <div class="wrap footer-grid">
+    <div class="footer-about">
+      <a class="brand" href="/">Kalyani Wasave</a>
+      <p>Configuration rules, engineering change and product line decisions for products with thousands of variants.</p>
+    </div>
+    <nav class="footer-nav" aria-label="Footer">
+      <a href="/#work">Work</a><a href="/articles/">Articles</a><a href="/glossary.html">Glossary</a><a href="/builds/">Labs</a><a href="/#experience">Experience</a><a href="/#contact">Contact</a>
+    </nav>
+    <div class="footer-social">
+      <span>Find me on</span>
+      <div class="icons"><a href="https://www.linkedin.com/in/kalyani-wasave-09789a76/" aria-label="LinkedIn" rel="noopener"><img src="/assets/img/linkedin-icon.svg" alt=""></a><a href="mailto:kalyani.vasave@gmail.com" aria-label="Email"><img src="/assets/img/email-icon.svg" alt=""></a><a href="https://github.com/kalyanivasave" aria-label="GitHub" rel="noopener"><img src="/assets/img/github-icon.svg" alt=""></a><a href="https://medium.com/@kalyani.vasave" aria-label="Medium" rel="noopener"><img src="/assets/img/medium-icon.svg" alt=""></a></div>
+    </div>
+  </div>
+  <div class="wrap footer-base"><span>© 2026 Kalyani Wasave</span><a href="mailto:kalyani.vasave@gmail.com">kalyani.vasave@gmail.com</a></div>
+</footer>
+<script>
+(function(){var b=document.getElementById('menu-btn'),n=document.getElementById('nav');
+b.addEventListener('click',function(){var o=n.classList.toggle('open');b.setAttribute('aria-expanded',o);});
+n.addEventListener('click',function(e){if(e.target.tagName==='A'){n.classList.remove('open');b.setAttribute('aria-expanded','false');}});})();
+</script>
+</body>
+</html>

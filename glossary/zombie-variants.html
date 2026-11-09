@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Zombie variants: definition and examples | Kalyani Wasave</title>
+<meta name="description" content="Options or variants that almost nobody orders but that everyone still has to maintain, because nobody has formally retired them.">
+<meta property="og:title" content="Zombie variants: definition and examples | Kalyani Wasave">
+<meta property="og:description" content="Options or variants that almost nobody orders but that everyone still has to maintain, because nobody has formally retired them.">
+<meta property="og:image" content="https://kalyanivasave.github.io/assets/img/rules-lab.png">
+<meta name="theme-color" content="#255B52">
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-K572SWW9');</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/assets/site.css">
+<link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
+</head>
+<body>
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-K572SWW9" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<a class="skip" href="#main">Skip to content</a>
+<header class="site-header">
+  <div class="wrap">
+    <a class="brand" href="/">Kalyani Wasave</a>
+    <button class="menu-btn" id="menu-btn" aria-expanded="false" aria-controls="nav">Menu</button>
+    <nav class="nav" id="nav" aria-label="Main"><a href="/#work">Work</a><a href="/articles/">Articles</a><a href="/glossary.html" aria-current="page">Glossary</a><a href="/builds/">Labs</a><a href="/#experience">Experience</a><a class="btn small" href="/#contact">Get in touch</a></nav>
+  </div>
+</header>
+<main id="main">
+
+<section class="page-head"><div class="wrap">
+  <p class="crumbs"><a href="/">Home</a> / <a href="/glossary.html">Glossary</a></p>
+  <h1>Zombie variants</h1>
+  
+  <p class="entry-def">Options or variants that almost nobody orders but that everyone still has to maintain, because nobody has formally retired them.</p>
+  <div class="related"><span>Related</span><a href="/glossary/sku-rationalization.html">SKU rationalization</a><a href="/glossary/variant-management.html">Variant management</a><a href="/glossary/combinatorial-explosion.html">Combinatorial explosion</a><a href="/glossary/engineering-change.html">Engineering change (ECR, ECO, ECN)</a></div>
+</div></section>
+<article class="wrap">
+  <div class="prose" style="padding-bottom:16px">
+<p>A zombie variant isn't dead and isn't alive. It sits in the price book, the configurator and every change impact analysis, costing a little effort everywhere, and almost never gets ordered. The term comes from <a href="https://variantmanagement-com.pages.dev/glossary/zombie-variants/" rel="noopener">Julian Weyer</a>, and once you've heard it you start seeing zombies in every portfolio.</p>
+
+<h2>How they're made</h2>
+<ul>
+  <li>An option is added for one project and never removed when the project ends.</li>
+  <li>A finish falls out of fashion but nobody owns the decision to stop selling it.</li>
+  <li>A replacement part is released but the old variant stays orderable “just in case.”</li>
+</ul>
+
+<h2>What they cost</h2>
+<table>
+  <thead><tr><th>Where</th><th>The hidden cost</th></tr></thead>
+  <tbody>
+    <tr><td>Configurator</td><td>Rules and test configurations that must still pass</td></tr>
+    <tr><td>Pricing</td><td>A column in every price book and dealer price file</td></tr>
+    <tr><td>Engineering change</td><td>Another row on every where-used and impact analysis</td></tr>
+    <tr><td>Supply</td><td>Minimum order quantities for parts that rarely move</td></tr>
+    <tr><td>Sales</td><td>One more choice that makes the product harder to explain</td></tr>
+  </tbody>
+</table>
+<p>None of these is large on its own. Together, across a few hundred zombies, they are a meaningful share of a configuration team's year.</p>
+
+<h2>How to find them</h2>
+<p>Join order history to the option list and sort by volume. Anything with near-zero orders over two years is a suspect. Then ask who would complain if it disappeared. If the answer is “nobody” or “I'm not sure”, you've found one. The cure is <a href="/glossary/sku-rationalization.html">SKU rationalization</a>, done as a proper engineering change. There's a story about one in <a href="/articles/nobody-ordered-the-purple-one.html">Nobody ordered the purple one</a>.</p>
+</div>
+  <section class="faq"><h2>Questions people ask</h2><details><summary>Are all low-volume variants zombies?</summary><p>No. A low-volume option that wins large projects, or that is legally required in one market, earns its keep. A zombie is low-volume and unowned.</p></details><details><summary>Who should kill a zombie?</summary><p>Whoever owns the product line, with configuration and engineering change doing the retirement properly so nothing breaks on the way out.</p></details></section>
+  <p class="muted" style="max-width:70ch">Updated November 2026. Think I've got something wrong? <a class="text-link" href="mailto:kalyani.vasave@gmail.com">Tell me</a>.</p>
+  <div class="next-up"><span class="muted">Previous: <a class="text-link" href="/glossary/variant-management.html">Variant management</a>&emsp;Next: <a class="text-link" href="/glossary/150-percent-bom.html">150% BOM</a></span><a class="btn ghost small" href="/glossary.html">All terms</a></div>
+</article>
+
+</main>
+<footer class="site-footer">
+  <div class="wrap footer-grid">
+    <div class="footer-about">
+      <a class="brand" href="/">Kalyani Wasave</a>
+      <p>Configuration rules, engineering change and product line decisions for products with thousands of variants.</p>
+    </div>
+    <nav class="footer-nav" aria-label="Footer">
+      <a href="/#work">Work</a><a href="/articles/">Articles</a><a href="/glossary.html">Glossary</a><a href="/builds/">Labs</a><a href="/#experience">Experience</a><a href="/#contact">Contact</a>
+    </nav>
+    <div class="footer-social">
+      <span>Find me on</span>
+      <div class="icons"><a href="https://www.linkedin.com/in/kalyani-wasave-09789a76/" aria-label="LinkedIn" rel="noopener"><img src="/assets/img/linkedin-icon.svg" alt=""></a><a href="mailto:kalyani.vasave@gmail.com" aria-label="Email"><img src="/assets/img/email-icon.svg" alt=""></a><a href="https://github.com/kalyanivasave" aria-label="GitHub" rel="noopener"><img src="/assets/img/github-icon.svg" alt=""></a><a href="https://medium.com/@kalyani.vasave" aria-label="Medium" rel="noopener"><img src="/assets/img/medium-icon.svg" alt=""></a></div>
+    </div>
+  </div>
+  <div class="wrap footer-base"><span>© 2026 Kalyani Wasave</span><a href="mailto:kalyani.vasave@gmail.com">kalyani.vasave@gmail.com</a></div>
+</footer>
+<script>
+(function(){var b=document.getElementById('menu-btn'),n=document.getElementById('nav');
+b.addEventListener('click',function(){var o=n.classList.toggle('open');b.setAttribute('aria-expanded',o);});
+n.addEventListener('click',function(e){if(e.target.tagName==='A'){n.classList.remove('open');b.setAttribute('aria-expanded','false');}});})();
+</script>
+</body>
+</html>

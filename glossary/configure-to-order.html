@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Configure to order (CTO): definition and examples | Kalyani Wasave</title>
+<meta name="description" content="A strategy where the product is engineered in advance as options and modules, and a specific variant is only assembled once a customer has chosen it.">
+<meta property="og:title" content="Configure to order (CTO): definition and examples | Kalyani Wasave">
+<meta property="og:description" content="A strategy where the product is engineered in advance as options and modules, and a specific variant is only assembled once a customer has chosen it.">
+<meta property="og:image" content="https://kalyanivasave.github.io/assets/img/rules-lab.png">
+<meta name="theme-color" content="#255B52">
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-K572SWW9');</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/assets/site.css">
+<link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
+</head>
+<body>
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-K572SWW9" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<a class="skip" href="#main">Skip to content</a>
+<header class="site-header">
+  <div class="wrap">
+    <a class="brand" href="/">Kalyani Wasave</a>
+    <button class="menu-btn" id="menu-btn" aria-expanded="false" aria-controls="nav">Menu</button>
+    <nav class="nav" id="nav" aria-label="Main"><a href="/#work">Work</a><a href="/articles/">Articles</a><a href="/glossary.html" aria-current="page">Glossary</a><a href="/builds/">Labs</a><a href="/#experience">Experience</a><a class="btn small" href="/#contact">Get in touch</a></nav>
+  </div>
+</header>
+<main id="main">
+
+<section class="page-head"><div class="wrap">
+  <p class="crumbs"><a href="/">Home</a> / <a href="/glossary.html">Glossary</a></p>
+  <h1>Configure to order (CTO)</h1>
+  <p class="aka">Also called: Assemble to order</p>
+  <p class="entry-def">A strategy where the product is engineered in advance as options and modules, and a specific variant is only assembled once a customer has chosen it.</p>
+  <div class="related"><span>Related</span><a href="/glossary/150-percent-bom.html">150% BOM</a><a href="/glossary/product-configurator.html">Product configurator</a><a href="/glossary/cpq.html">CPQ</a><a href="/glossary/variant-management.html">Variant management</a></div>
+</div></section>
+<article class="wrap">
+  <div class="prose" style="padding-bottom:16px">
+<p>Configure to order is the deal a manufacturer makes with complexity: do the engineering once, up front, and let the customer do the choosing. Every option is designed, validated, costed and routed before anyone orders it. When an order arrives, nobody draws anything. The order simply picks a path through decisions that were already made.</p>
+<p>Office chairs, commercial door hardware, HVAC units, switchgear and most trucks are sold this way. So is a pizza.</p>
+
+<h2>How it works</h2>
+<p>CTO has two halves that run on different clocks.</p>
+<p><strong>Before any order.</strong> Engineering releases the modules and options. Someone like me turns them into a product model: attributes, allowed values, <a href="/glossary/constraint.html">constraints</a>, a <a href="/glossary/150-percent-bom.html">150% BOM</a> with a condition on every line, routings and a price build-up. This is slow, careful work, and it's where almost all the risk lives.</p>
+<p><strong>At order time.</strong> A dealer or salesperson configures the product in a <a href="/glossary/product-configurator.html">configurator</a> or <a href="/glossary/cpq.html">CPQ</a>. The rules filter the 150% BOM down to the order's 100% BOM, ERP schedules it, and the plant builds it. If the first half was done well, the second half is boring. Boring is the goal.</p>
+
+<h2>Where CTO sits among the strategies</h2>
+<table>
+  <thead><tr><th>Strategy</th><th>What exists before the order</th><th>Typical lead time</th><th>Variety</th></tr></thead>
+  <tbody>
+    <tr><td>Make to stock</td><td>Finished goods on a shelf</td><td>Days</td><td>Low</td></tr>
+    <tr><td>Configure to order</td><td>Engineered options and modules</td><td>Weeks</td><td>Very high</td></tr>
+    <tr><td>Make to order</td><td>A released design, built per order</td><td>Weeks</td><td>Medium</td></tr>
+    <tr><td>Engineer to order</td><td>A capability, not a design</td><td>Months</td><td>Unlimited</td></tr>
+  </tbody>
+</table>
+<p>Most real companies run more than one. A furniture maker can sell a configured task chair, stock a popular side table and engineer a one-off reception desk, all in the same week.</p>
+
+<h2>Where it goes wrong</h2>
+<ul>
+  <li><strong>The model drifts from the plant.</strong> Engineering changes a part, the rule set doesn't follow, and the configurator keeps selling something that no longer exists. The result is <a href="/glossary/order-fallout.html">order fallout</a>.</li>
+  <li><strong>"Special" becomes a habit.</strong> Every non-standard request that gets handled by hand is a little engineer-to-order work hiding inside a CTO business. A few are healthy. Hundreds a month mean the option model is missing something customers actually want.</li>
+  <li><strong>Options are added and never removed.</strong> CTO makes adding variety cheap at the moment you add it, and expensive forever after. That's how <a href="/glossary/zombie-variants.html">zombie variants</a> are born.</li>
+</ul>
+
+<h2>Example</h2>
+<p>A commercial lock family offers 5 functions, 3 levers, 4 finishes, 3 cylinder types, 4 handings, 2 door thicknesses, 2 fire ratings and 3 electrified options. That is 8,640 combinations on paper. Nobody stocks them. The plant stocks a few hundred parts, and the <a href="/builds/rules-lab.html">Rules Lab</a> shows how the right ones are picked for each order.</p>
+</div>
+  <section class="faq"><h2>Questions people ask</h2><details><summary>Is CTO the same as make to order?</summary><p>Not quite. Make to order builds a known design once an order arrives. Configure to order also lets the customer choose the design from a predefined option space. All CTO is make to order; not all make to order is configurable.</p></details><details><summary>When should a company move from engineer to order to CTO?</summary><p>When the same “custom” requests keep coming back. If engineers are redrawing the same five variations every month, those variations belong in the option model.</p></details></section>
+  <p class="muted" style="max-width:70ch">Updated November 2026. Think I've got something wrong? <a class="text-link" href="mailto:kalyani.vasave@gmail.com">Tell me</a>.</p>
+  <div class="next-up"><span class="muted">Previous: <a class="text-link" href="/glossary/combinatorial-explosion.html">Combinatorial explosion</a>&emsp;Next: <a class="text-link" href="/glossary/constraint.html">Constraint</a></span><a class="btn ghost small" href="/glossary.html">All terms</a></div>
+</article>
+
+</main>
+<footer class="site-footer">
+  <div class="wrap footer-grid">
+    <div class="footer-about">
+      <a class="brand" href="/">Kalyani Wasave</a>
+      <p>Configuration rules, engineering change and product line decisions for products with thousands of variants.</p>
+    </div>
+    <nav class="footer-nav" aria-label="Footer">
+      <a href="/#work">Work</a><a href="/articles/">Articles</a><a href="/glossary.html">Glossary</a><a href="/builds/">Labs</a><a href="/#experience">Experience</a><a href="/#contact">Contact</a>
+    </nav>
+    <div class="footer-social">
+      <span>Find me on</span>
+      <div class="icons"><a href="https://www.linkedin.com/in/kalyani-wasave-09789a76/" aria-label="LinkedIn" rel="noopener"><img src="/assets/img/linkedin-icon.svg" alt=""></a><a href="mailto:kalyani.vasave@gmail.com" aria-label="Email"><img src="/assets/img/email-icon.svg" alt=""></a><a href="https://github.com/kalyanivasave" aria-label="GitHub" rel="noopener"><img src="/assets/img/github-icon.svg" alt=""></a><a href="https://medium.com/@kalyani.vasave" aria-label="Medium" rel="noopener"><img src="/assets/img/medium-icon.svg" alt=""></a></div>
+    </div>
+  </div>
+  <div class="wrap footer-base"><span>© 2026 Kalyani Wasave</span><a href="mailto:kalyani.vasave@gmail.com">kalyani.vasave@gmail.com</a></div>
+</footer>
+<script>
+(function(){var b=document.getElementById('menu-btn'),n=document.getElementById('nav');
+b.addEventListener('click',function(){var o=n.classList.toggle('open');b.setAttribute('aria-expanded',o);});
+n.addEventListener('click',function(e){if(e.target.tagName==='A'){n.classList.remove('open');b.setAttribute('aria-expanded','false');}});})();
+</script>
+</body>
+</html>

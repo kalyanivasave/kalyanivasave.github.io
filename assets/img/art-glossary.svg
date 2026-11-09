@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 400" role="img" aria-label="Glossary terms on tags: 150% BOM, effectivity, ECO, zombie variant, CTO, where-used">
+  <rect width="640" height="400" fill="#255B52"/>
+  <g font-family="Space Grotesk, Arial, sans-serif" font-weight="700" font-size="26">
+    <g transform="rotate(-6 320 200)">
+      <rect x="60" y="70" width="230" height="64" rx="32" fill="#B9D3CB"/><text x="175" y="112" text-anchor="middle" fill="#263431">150% BOM</text>
+      <rect x="320" y="58" width="240" height="64" rx="32" fill="none" stroke="#DCE9E4" stroke-width="3"/><text x="440" y="100" text-anchor="middle" fill="#F5F3EE">Effectivity</text>
+      <rect x="110" y="168" width="150" height="64" rx="32" fill="none" stroke="#DCE9E4" stroke-width="3"/><text x="185" y="210" text-anchor="middle" fill="#F5F3EE">ECO</text>
+      <rect x="290" y="158" width="290" height="64" rx="32" fill="#263431"/><text x="435" y="200" text-anchor="middle" fill="#FFFFFF">Zombie variant</text>
+      <rect x="70" y="268" width="150" height="64" rx="32" fill="#263431"/><text x="145" y="310" text-anchor="middle" fill="#FFFFFF">CTO</text>
+      <rect x="250" y="258" width="240" height="64" rx="32" fill="none" stroke="#B9D3CB" stroke-width="3"/><text x="370" y="300" text-anchor="middle" fill="#DCE9E4">Where-used</text>
+    </g>
+  </g>
+</svg>

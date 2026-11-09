@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 400" role="img" aria-label="A pizza split half pepperoni, half mushroom, next to a folded calzone marked not available">
+  <rect width="640" height="400" fill="#F5F3EE"/>
+  <g transform="translate(190 205)">
+    <circle r="132" fill="#CDD3CB"/>
+    <circle r="114" fill="#E9ECE6"/>
+    <path d="M0-114A114 114 0 0 1 0 114Z" fill="#DDE2DA"/>
+    <line x1="0" y1="-126" x2="0" y2="126" stroke="#263431" stroke-width="4" stroke-dasharray="10 8"/>
+    <g fill="#255B52"><circle cx="-62" cy="-40" r="15"/><circle cx="-34" cy="22" r="15"/><circle cx="-74" cy="38" r="15"/><circle cx="-30" cy="-78" r="13"/><circle cx="-60" cy="78" r="12"/></g>
+    <g fill="#66736E"><ellipse cx="44" cy="-52" rx="16" ry="10"/><ellipse cx="70" cy="10" rx="16" ry="10"/><ellipse cx="34" cy="48" rx="16" ry="10"/><ellipse cx="62" cy="76" rx="13" ry="8"/><ellipse cx="30" cy="-6" rx="13" ry="8"/></g>
+  </g>
+  <g transform="translate(470 210)">
+    <path d="M-110 30A110 110 0 0 1 110 30Z" fill="#CDD3CB"/>
+    <path d="M-110 30Q0 52 110 30" fill="none" stroke="#AEB5AC" stroke-width="6" stroke-linecap="round"/>
+    <g stroke="#AEB5AC" stroke-width="5" stroke-linecap="round"><path d="M-88 34l-6 12"/><path d="M-58 40l-4 12"/><path d="M-26 43l-2 12"/><path d="M8 44v12"/><path d="M40 42l3 12"/><path d="M72 38l5 12"/></g>
+    <circle cx="0" cy="-62" r="34" fill="#263431"/>
+    <path d="M-14-76l28 28M14-76l-28 28" stroke="#F5F3EE" stroke-width="7" stroke-linecap="round"/>
+  </g>
+  <rect x="350" y="300" width="236" height="44" rx="22" fill="#263431"/>
+  <text x="468" y="328" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="17" font-weight="600" fill="#F5F3EE">No half-and-half calzones</text>
+</svg>

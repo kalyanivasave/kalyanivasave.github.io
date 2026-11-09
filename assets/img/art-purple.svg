@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 400" role="img" aria-label="A long-tail bar chart of finish orders, with a purple finish at the very end">
+  <rect width="640" height="400" fill="#F5F3EE"/>
+  <line x1="60" y1="320" x2="600" y2="320" stroke="#263431" stroke-width="2"/>
+  <g fill="#263431">
+    <rect x="70" y="80" width="34" height="240" rx="4"/><rect x="112" y="140" width="34" height="180" rx="4"/><rect x="154" y="190" width="34" height="130" rx="4"/>
+  </g>
+  <g fill="#255B52"><rect x="196" y="230" width="34" height="90" rx="4"/><rect x="238" y="256" width="34" height="64" rx="4"/><rect x="280" y="274" width="34" height="46" rx="4"/><rect x="322" y="287" width="34" height="33" rx="4"/></g>
+  <g fill="#C9CEC6"><rect x="364" y="296" width="34" height="24" rx="4"/><rect x="406" y="302" width="34" height="18" rx="4"/><rect x="448" y="307" width="34" height="13" rx="4"/><rect x="490" y="311" width="34" height="9" rx="4"/></g>
+  <rect x="540" y="315" width="34" height="5" rx="2" fill="#6B3A6E"/>
+  <path d="M557 300V200" stroke="#6B3A6E" stroke-width="2" stroke-dasharray="4 5"/>
+  <rect x="470" y="150" width="174" height="48" rx="24" fill="#6B3A6E"/>
+  <text x="557" y="180" font-family="Inter, Arial, sans-serif" font-size="16" font-weight="600" fill="#F5F3EE" text-anchor="middle">Aubergine: 3 units</text>
+  <text x="70" y="356" font-family="Inter, Arial, sans-serif" font-size="15" fill="#66736E">Finishes, sorted by orders over two years</text>
+  <text x="250" y="110" font-family="Space Grotesk, Arial, sans-serif" font-size="22" font-weight="700" fill="#263431">Most orders live here…</text>
+</svg>

@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Order fallout: definition and examples | Kalyani Wasave</title>
+<meta name="description" content="Orders that can&#x27;t flow straight through to production because something in them is invalid, unpriced, unbuildable or unclear, and needs a person to fix it.">
+<meta property="og:title" content="Order fallout: definition and examples | Kalyani Wasave">
+<meta property="og:description" content="Orders that can&#x27;t flow straight through to production because something in them is invalid, unpriced, unbuildable or unclear, and needs a person to fix it.">
+<meta property="og:image" content="https://kalyanivasave.github.io/assets/img/rules-lab.png">
+<meta name="theme-color" content="#255B52">
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-K572SWW9');</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/assets/site.css">
+<link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
+</head>
+<body>
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-K572SWW9" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<a class="skip" href="#main">Skip to content</a>
+<header class="site-header">
+  <div class="wrap">
+    <a class="brand" href="/">Kalyani Wasave</a>
+    <button class="menu-btn" id="menu-btn" aria-expanded="false" aria-controls="nav">Menu</button>
+    <nav class="nav" id="nav" aria-label="Main"><a href="/#work">Work</a><a href="/articles/">Articles</a><a href="/glossary.html" aria-current="page">Glossary</a><a href="/builds/">Labs</a><a href="/#experience">Experience</a><a class="btn small" href="/#contact">Get in touch</a></nav>
+  </div>
+</header>
+<main id="main">
+
+<section class="page-head"><div class="wrap">
+  <p class="crumbs"><a href="/">Home</a> / <a href="/glossary.html">Glossary</a></p>
+  <h1>Order fallout</h1>
+  <p class="aka">Also called: Order exceptions, kick-backs</p>
+  <p class="entry-def">Orders that can&#x27;t flow straight through to production because something in them is invalid, unpriced, unbuildable or unclear, and needs a person to fix it.</p>
+  <div class="related"><span>Related</span><a href="/glossary/constraint.html">Constraint</a><a href="/glossary/cpq.html">CPQ</a><a href="/glossary/engineering-change.html">Engineering change (ECR, ECO, ECN)</a><a href="/glossary/product-configurator.html">Product configurator</a></div>
+</div></section>
+<article class="wrap">
+  <div class="prose" style="padding-bottom:16px">
+<p>In a configure-to-order business a perfect order touches no human between the dealer's click and the plant's schedule. Fallout is every order that doesn't make it. Each one costs someone's time, and many cost a delivery date.</p>
+
+<h2>Where it comes from</h2>
+<table>
+  <thead><tr><th>Cause</th><th>Looks like</th><th>Real fix</th></tr></thead>
+  <tbody>
+    <tr><td>Missing constraint</td><td>An unbuildable combination was allowed</td><td>Add the rule and a test</td></tr>
+    <tr><td>Stale orderability</td><td>A retired part is still selectable</td><td>Lifecycle state and effectivity</td></tr>
+    <tr><td>Pricing gap</td><td>An option with no price</td><td>Publish rules and prices together</td></tr>
+    <tr><td>Master data</td><td>Wrong unit, code or description</td><td>Data governance</td></tr>
+    <tr><td>Timing</td><td>A change landed mid-order</td><td>Better cut-in dates</td></tr>
+  </tbody>
+</table>
+
+<h2>The habit that matters</h2>
+<p>Fixing the order is the easy half. The useful half is asking what let it through and fixing that, then saving the failed configuration as a test so it can't return. I was the single-point owner of order fallout for North American B2B dealers and OEMs at MillerKnoll, and working this way is part of how we reduced quoting errors by 30%. The longer version is in <a href="/articles/order-fallout-is-a-product-problem.html">Order fallout is a product problem</a>.</p>
+</div>
+  <section class="faq"><h2>Questions people ask</h2><details><summary>Is some fallout normal?</summary><p>Yes. Truly special requests will always need a person. The goal is that what falls out is genuinely special, not a repeat of last week's error.</p></details><details><summary>How should it be measured?</summary><p>As a rate (orders needing intervention over all configured orders), by cause, and by repeat cause. Repeat fallout is the most telling number.</p></details></section>
+  <p class="muted" style="max-width:70ch">Updated November 2026. Think I've got something wrong? <a class="text-link" href="mailto:kalyani.vasave@gmail.com">Tell me</a>.</p>
+  <div class="next-up"><span class="muted">Previous: <a class="text-link" href="/glossary/modular-architecture.html">Modular product architecture</a>&emsp;Next: <a class="text-link" href="/glossary/product-configurator.html">Product configurator</a></span><a class="btn ghost small" href="/glossary.html">All terms</a></div>
+</article>
+
+</main>
+<footer class="site-footer">
+  <div class="wrap footer-grid">
+    <div class="footer-about">
+      <a class="brand" href="/">Kalyani Wasave</a>
+      <p>Configuration rules, engineering change and product line decisions for products with thousands of variants.</p>
+    </div>
+    <nav class="footer-nav" aria-label="Footer">
+      <a href="/#work">Work</a><a href="/articles/">Articles</a><a href="/glossary.html">Glossary</a><a href="/builds/">Labs</a><a href="/#experience">Experience</a><a href="/#contact">Contact</a>
+    </nav>
+    <div class="footer-social">
+      <span>Find me on</span>
+      <div class="icons"><a href="https://www.linkedin.com/in/kalyani-wasave-09789a76/" aria-label="LinkedIn" rel="noopener"><img src="/assets/img/linkedin-icon.svg" alt=""></a><a href="mailto:kalyani.vasave@gmail.com" aria-label="Email"><img src="/assets/img/email-icon.svg" alt=""></a><a href="https://github.com/kalyanivasave" aria-label="GitHub" rel="noopener"><img src="/assets/img/github-icon.svg" alt=""></a><a href="https://medium.com/@kalyani.vasave" aria-label="Medium" rel="noopener"><img src="/assets/img/medium-icon.svg" alt=""></a></div>
+    </div>
+  </div>
+  <div class="wrap footer-base"><span>© 2026 Kalyani Wasave</span><a href="mailto:kalyani.vasave@gmail.com">kalyani.vasave@gmail.com</a></div>
+</footer>
+<script>
+(function(){var b=document.getElementById('menu-btn'),n=document.getElementById('nav');
+b.addEventListener('click',function(){var o=n.classList.toggle('open');b.setAttribute('aria-expanded',o);});
+n.addEventListener('click',function(e){if(e.target.tagName==='A'){n.classList.remove('open');b.setAttribute('aria-expanded','false');}});})();
+</script>
+</body>
+</html>
