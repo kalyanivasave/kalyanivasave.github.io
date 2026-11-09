@@ -532,3 +532,65 @@ tr.reprice td:first-child { box-shadow: inset 3px 0 0 var(--accent); }
 .feature-star .media { align-items: stretch; }
 .feature-star .media img { height: 100%; max-height: 720px; object-fit: cover; object-position: top left; }
 @media (max-width: 900px) { .feature-star .media img { height: auto; max-height: none; } }
+
+/* Clearer card boundaries and section labels */
+.card,
+.term-card,
+.mini,
+.edu-card,
+.principle,
+.term-row,
+.value-grid,
+.feature {
+  border-color: rgba(37, 91, 82, 0.34);
+}
+.card,
+.term-card,
+.mini,
+.edu-card,
+.principle,
+.term-row,
+.feature {
+  border-width: 1.5px;
+}
+.card,
+.term-card,
+.mini,
+.edu-card,
+.principle,
+.term-row {
+  box-shadow: 0 2px 8px rgba(38, 52, 49, 0.045);
+}
+.block + .block {
+  margin-top: 56px;
+  padding-top: 32px;
+  border-top: 1px solid var(--line);
+}
+.block-head {
+  gap: 12px 18px;
+  padding: 0 0 16px;
+  border-bottom: 1px solid var(--line);
+  margin-bottom: 22px;
+}
+.block-head::before { display: none; }
+.block-head h3 {
+  display: inline-flex;
+  align-items: center;
+  flex: 0 0 auto;
+  padding: 7px 12px;
+  border: 1px solid rgba(37, 91, 82, 0.28);
+  border-radius: 8px;
+  background: var(--accent-soft);
+  color: var(--accent);
+}
+.card:hover,
+.term-card:hover {
+  border-color: var(--accent);
+  box-shadow: var(--shadow);
+}
+@media (max-width: 640px) {
+  .block + .block {
+    margin-top: 40px;
+    padding-top: 24px;
+  }
+}
