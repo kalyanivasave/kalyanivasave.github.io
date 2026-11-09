@@ -459,6 +459,10 @@ tr.reprice td:first-child { box-shadow: inset 3px 0 0 var(--accent); }
 .contact { background: var(--accent-soft); color: var(--ink); }
 .contact h2 { color: var(--ink); }
 .contact p { color: var(--text-2); }
+.contact .contact-content { max-width: 900px; text-align: left; }
+.contact .contact-content h2 { margin-bottom: 20px; }
+.contact .contact-content p { max-width: 68ch; margin: 0 0 16px; }
+.contact .contact-content .btn-row { justify-content: flex-start; margin-top: 24px; }
 .resumes a { color: var(--accent); border-color: rgba(37, 91, 82, 0.3); background: #fff; }
 .resumes a:hover { border-color: var(--accent); color: var(--accent-dark); }
 .resumes span { color: var(--text-2); }
