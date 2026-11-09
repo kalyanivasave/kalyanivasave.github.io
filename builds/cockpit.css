@@ -117,3 +117,17 @@
 .cockpit .toast{position:fixed;left:50%;bottom:calc(20px + env(safe-area-inset-bottom,0px));transform:translateX(-50%);background:var(--ink);color:var(--panel);padding:9px 16px;border-radius:8px;font-size:14px;opacity:0;pointer-events:none;transition:opacity .2s}
 .cockpit .toast.show{opacity:1}
 @media (prefers-reduced-motion:reduce){.cockpit .toast{transition:none}}
+
+/* Clickable step navigation */
+.cockpit .ck-hint{margin:6px 0 10px;font-size:15px;color:#1C4740;font-weight:500}
+.cockpit .ck-hint b{color:#255B52}
+.cockpit nav.steps{gap:6px;align-items:center;margin:4px 0 22px}
+.cockpit nav.steps button{border:1.5px solid #B9D3CB;background:#fff;color:#1C4740;font-weight:600;cursor:pointer;box-shadow:0 1px 2px rgba(38,52,49,.06);transition:background .15s,border-color .15s,transform .15s}
+.cockpit nav.steps button:hover{border-color:#255B52;background:#E6EFEC;transform:translateY(-1px)}
+.cockpit nav.steps button .n{background:#E6EFEC;color:#255B52;border:1px solid #B9D3CB}
+.cockpit nav.steps button[aria-current="page"]{background:#255B52;border-color:#255B52;color:#fff;box-shadow:0 6px 16px -8px rgba(37,91,82,.6)}
+.cockpit nav.steps button[aria-current="page"] .n{background:#fff;color:#255B52;border-color:#fff}
+.cockpit nav.steps .sep{width:auto;height:auto;background:none;color:#8C958F;font-size:16px;line-height:1}
+.cockpit nav.steps .sep::after{content:"\2192"}
+.cockpit nav.steps .sep[style]::after{content:""}
+@media (prefers-reduced-motion: reduce){.cockpit nav.steps button{transition:none}.cockpit nav.steps button:hover{transform:none}}
