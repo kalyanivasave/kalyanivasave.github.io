@@ -34,7 +34,7 @@
 .cockpit .grid{display:grid;gap:16px}
 .cockpit .g-hero{grid-template-columns:minmax(0,1.15fr) minmax(0,1fr)}
 .cockpit .g-2{grid-template-columns:minmax(0,1fr) minmax(0,1fr)}
-.cockpit .g-decide{grid-template-columns:290px minmax(0,1fr);align-items:start}
+.cockpit .g-decide{grid-template-columns:minmax(0,1fr);align-items:start}
 @media (max-width:900px){.cockpit .g-hero,.cockpit .g-2,.cockpit .g-decide{grid-template-columns:minmax(0,1fr)}}
 .cockpit h2{font-family:var(--cond);font-weight:600;font-size:21px;margin:0 0 4px;line-height:1.15}
 .cockpit h3{font-size:15px;font-weight:600;margin:0 0 8px}
@@ -131,3 +131,11 @@
 .cockpit nav.steps .sep::after{content:"\2192"}
 .cockpit nav.steps .sep[style]::after{content:""}
 @media (prefers-reduced-motion: reduce){.cockpit nav.steps button{transition:none}.cockpit nav.steps button:hover{transform:none}}
+
+/* Keep the action controls visible when the wide table scrolls horizontally. */
+.cockpit .table-wrap th:last-child,
+.cockpit .table-wrap td:last-child{position:sticky;right:0}
+.cockpit .table-wrap th:last-child{z-index:2;background:var(--panel-2)}
+.cockpit .table-wrap td:last-child{z-index:1;background:var(--panel);box-shadow:-8px 0 10px -10px rgba(38,52,49,.35)}
+.cockpit .table-wrap tr.row:hover td:last-child,
+.cockpit .table-wrap tr.sel td:last-child{background:var(--panel-2)}
