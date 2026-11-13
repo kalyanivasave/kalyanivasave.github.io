@@ -150,6 +150,13 @@ strong { font-weight: 600; }
 .card h3 { font-size: 1.2rem; margin-bottom: 8px; }
 .card p { color: var(--text-2); font-size: 0.96rem; flex: 1; }
 .card .more { font-weight: 600; color: var(--accent); }
+.other-project-cards { gap: 18px; }
+.other-project-card img { aspect-ratio: 16 / 8; }
+.other-project-card .card-body { padding: 18px 20px 20px; }
+.other-project-card .pill { font-size: 0.75rem; padding: 3px 10px; margin-bottom: 10px; }
+.other-project-card h3 { font-size: 1.08rem; }
+.other-project-card p { font-size: 0.9rem; }
+.other-project-card .more { margin-top: auto; }
 
 .term-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 16px; }
 .term-card { display: block; text-decoration: none; background: #fff; border: 1px solid var(--line); border-radius: var(--r-sm); padding: 20px 22px; transition: border-color 0.15s; position: relative; }
